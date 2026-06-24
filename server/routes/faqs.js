@@ -18,12 +18,32 @@ function verifyAdminHeader(req) {
 router.get('/', async (req, res) => {
   try {
     const faqs = await readJSON(FAQS_FILE);
+    let modified = false;
 
-    // Ensure every single item structurally has a unique ID string!
-    const sanitizedFaqs = (Array.isArray(faqs) ? faqs : []).map((faq, index) => ({
-      ...faq,
-      id: faq.id || `faq-${index}`
-    }));
+    const sanitizedFaqs = faqs.map((faq, index) => {
+      // ⚡ CRITICAL: If it doesn't have an ID, give it a completely permanent, unique ID right now
+      // This protects against array shifting completely!
+      const permanentId = faq.id && !String(faq.id).startsWith('faq-') 
+        ? faq.id 
+        : `q-${Date.now()}-${Math.random().toString(36).slice(2, 7)}-${index}`;
+
+      if (!faq.id || String(faq.id).startsWith('faq-') || faq.upvotes === undefined || faq.downvotes === undefined) {
+        modified = true;
+        return {
+          id: permanentId,
+          question: faq.question,
+          answer: faq.answer,
+          category: faq.category || 'Syntax & Basics',
+          upvotes: faq.upvotes !== undefined ? Number(faq.upvotes) : 0,
+          downvotes: faq.downvotes !== undefined ? Number(faq.downvotes) : 0
+        };
+      }
+      return faq;
+    });
+
+    if (modified) {
+      await writeJSON(FAQS_FILE, sanitizedFaqs);
+    }
 
     return res.json(sanitizedFaqs);
   } catch (err) {
@@ -35,18 +55,38 @@ router.get('/', async (req, res) => {
 router.patch('/:id/vote', async (req, res) => {
   try {
     const { id } = req.params;
-    const { type } = req.body || {};
-    if (!['upvote', 'downvote'].includes(type)) return res.status(400).json({ error: 'type must be upvote or downvote' });
+    const { type, action } = req.body || {}; // action is 'increment', 'undo', or 'switch'
+    if (!['upvote', 'downvote'].includes(type)) return res.status(400).json({ error: 'Invalid vote type' });
 
     const faqs = await readJSON(FAQS_FILE);
     const idx = faqs.findIndex(f => String(f.id) === String(id));
     if (idx === -1) return res.status(404).json({ error: 'FAQ not found' });
 
-    if (type === 'upvote') faqs[idx].upvotes = (Number(faqs[idx].upvotes) || 0) + 1;
-    else faqs[idx].downvotes = (Number(faqs[idx].downvotes) || 0) + 1;
+    let up = Number(faqs[idx].upvotes) || 0;
+    let down = Number(faqs[idx].downvotes) || 0;
+
+    if (action === 'undo') {
+      if (type === 'upvote') up = Math.max(0, up - 1);
+      else down = Math.max(0, down - 1);
+    } else if (action === 'switch') {
+      if (type === 'upvote') {
+        up = up + 1;
+        down = Math.max(0, down - 1);
+      } else {
+        down = down + 1;
+        up = Math.max(0, up - 1);
+      }
+    } else {
+      // standard fresh increment
+      if (type === 'upvote') up = up + 1;
+      else down = down + 1;
+    }
+
+    faqs[idx].upvotes = up;
+    faqs[idx].downvotes = down;
 
     await writeJSON(FAQS_FILE, faqs);
-    return res.json({ status: 'ok', item: { ...faqs[idx], id: id } });
+    return res.json({ status: 'ok', item: faqs[idx] });
   } catch (err) {
     return res.status(500).json({ error: err.message });
   }

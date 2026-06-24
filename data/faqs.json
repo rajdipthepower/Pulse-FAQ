@@ -1,553 +1,1090 @@
 [
   {
+    "id": "q-1782288260767-k9peq-0",
     "question": "Q1. What is the difference between list and tuples in Python?",
-    "answer": "Lists are mutable i.e., they can be edited, whereas tuples are immutable, meaning they cannot be edited after creation. Additionally, lists are slower than tuples. Syntax-wise, lists use square brackets (e.g., list_1 = [10, ‘Chelsea’, 20]) while tuples use parentheses (e.g., tup_1 = (10, ‘Chelsea’, 20))."
+    "answer": "Lists are mutable i.e., they can be edited, whereas tuples are immutable, meaning they cannot be edited after creation. Additionally, lists are slower than tuples. Syntax-wise, lists use square brackets (e.g., list_1 = [10, ‘Chelsea’, 20]) while tuples use parentheses (e.g., tup_1 = (10, ‘Chelsea’, 20)).",
+    "category": "Syntax & Basics",
+    "upvotes": 1,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-yleco-1",
     "question": "Q2. What are the key features of Python?",
-    "answer": "Python is an interpreted language, dynamically typed, and well suited to object-oriented programming (allowing classes, composition, and inheritance without access specifiers). Functions and classes are first-class objects. While running it can be slower than compiled languages, it allows C-based extensions (like numpy) for optimization. It is used widely across web applications, automation, scientific modeling, big data, and as 'glue' code."
+    "answer": "Python is an interpreted language, dynamically typed, and well suited to object-oriented programming (allowing classes, composition, and inheritance without access specifiers). Functions and classes are first-class objects. While running it can be slower than compiled languages, it allows C-based extensions (like numpy) for optimization. It is used widely across web applications, automation, scientific modeling, big data, and as 'glue' code.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-t7080-2",
     "question": "Q3. What type of language is python? Programming or scripting?",
-    "answer": "Python is capable of scripting, but in a general sense, it is considered as a general-purpose programming language."
+    "answer": "Python is capable of scripting, but in a general sense, it is considered as a general-purpose programming language.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-ze26o-3",
     "question": "Q4.Python an interpreted language. Explain.",
-    "answer": "An interpreted language is any programming language which is not in machine-level code before runtime. Therefore, Python is an interpreted language."
+    "answer": "An interpreted language is any programming language which is not in machine-level code before runtime. Therefore, Python is an interpreted language.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-x347g-4",
     "question": "Q5.What is pep 8?",
-    "answer": "PEP stands for Python Enhancement Proposal. It is a set of rules that specify how to format Python code for maximum readability."
+    "answer": "PEP stands for Python Enhancement Proposal. It is a set of rules that specify how to format Python code for maximum readability.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-i6awq-5",
     "question": "Q6.What are the benefits of using Python?",
-    "answer": "The benefits of using python are: Easy to use (high-level, easy to read/write/learn), Interpreted language (executes line by line, stops at errors), Dynamically typed (data types automatically assigned during execution), Free and open-source, Extensive support for libraries via Python Package Manager (pip), Portable across platforms without changes, user-friendly data structures, and provides more functionality with less coding."
+    "answer": "The benefits of using python are: Easy to use (high-level, easy to read/write/learn), Interpreted language (executes line by line, stops at errors), Dynamically typed (data types automatically assigned during execution), Free and open-source, Extensive support for libraries via Python Package Manager (pip), Portable across platforms without changes, user-friendly data structures, and provides more functionality with less coding.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-umsxx-6",
     "question": "Q7.What are Python namespaces?",
-    "answer": "A namespace in python refers to the name which is assigned to each object in python (variables and functions), maintained like a dictionary where the key is the namespace and value is the address of the object. There are 4 types: Built-in namespace, Global namespace, Enclosing namespaces, and Local namespaces."
+    "answer": "A namespace in python refers to the name which is assigned to each object in python (variables and functions), maintained like a dictionary where the key is the namespace and value is the address of the object. There are 4 types: Built-in namespace, Global namespace, Enclosing namespaces, and Local namespaces.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-x45jc-7",
     "question": "Q8.What are decorators in Python?",
-    "answer": "Decorators are used to add some design patterns to a function without changing its structure. They generally are defined before the function they are enhancing, applied using the @ symbol before the decorator."
+    "answer": "Decorators are used to add some design patterns to a function without changing its structure. They generally are defined before the function they are enhancing, applied using the @ symbol before the decorator.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288508116-ef49p-8",
     "question": "Q9.What are Dict and List comprehensions?",
-    "answer": "Dictionary and list comprehensions are just another concise way to define dictionaries and lists. Example of list comprehension: x=[i for i in range(5)] produces [0,1,2,3,4]."
+    "answer": "Dictionary and list comprehensions are just another concise way to define dictionaries and lists. Example of list comprehension: x=[i for i in range(5)] produces [0,1,2,3,4].",
+    "category": "Data Structures",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288508116-x8u3a-9",
     "question": "Q10.What are the common built-in data types in Python?",
-    "answer": "The common built-in data types in python are: Numbers (integers, floating-point, complex), List (ordered mutable sequence), Tuple (ordered immutable sequence), String (sequence of characters), Set (unordered collection of unique items), Dictionary (key-value pairs), and Boolean (True and False)."
+    "answer": "The common built-in data types in python are: Numbers (integers, floating-point, complex), List (ordered mutable sequence), Tuple (ordered immutable sequence), String (sequence of characters), Set (unordered collection of unique items), Dictionary (key-value pairs), and Boolean (True and False).",
+    "category": "Data Structures",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-h7sbf-10",
     "question": "Q11.What is the difference between .py and .pyc files?",
-    "answer": "The .py files are the python source code files. While the .pyc files contain the bytecode of the python files, created when the code is imported from some other source to help save time for the interpreter."
+    "answer": "The .py files are the python source code files. While the .pyc files contain the bytecode of the python files, created when the code is imported from some other source to help save time for the interpreter.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288508116-epsx0-11",
     "question": "Q12.What is slicing in Python?",
-    "answer": "Slicing is used to access parts of sequences like lists, tuples, and strings using the syntax [start:end:step]. It returns all elements from start (inclusive) till end-1, where a negative index counts from the end and step indicates the jump/elements to skip."
+    "answer": "Slicing is used to access parts of sequences like lists, tuples, and strings using the syntax [start:end:step]. It returns all elements from start (inclusive) till end-1, where a negative index counts from the end and step indicates the jump/elements to skip.",
+    "category": "Data Structures",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-s9wgo-12",
     "question": "Q13.What are Keywords in Python?",
-    "answer": "Keywords in python are reserved words that have special meaning, generally used to define types of variables, and cannot be used for variable or function names. There are 33 keywords listed including And, Or, Not, If, Elif, Else, For, While, Break, Def, Lambda, Pass, Return, True, False, Class, etc."
+    "answer": "Keywords in python are reserved words that have special meaning, generally used to define types of variables, and cannot be used for variable or function names. There are 33 keywords listed including And, Or, Not, If, Elif, Else, For, While, Break, Def, Lambda, Pass, Return, True, False, Class, etc.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-btetl-13",
     "question": "Q14.What are Literals in Python and explain about different Literals",
-    "answer": "A literal represents a fixed value for primitive data types. There are 5 types: String literals (enclosed in single, double, or triple quotes), Character literals (single character in double quotes), Numeric literals (integer, float, complex), Boolean literals (True or False), Literal Collections (List, Tuple, Dictionary, Set), and 1 Special literal (None)."
+    "answer": "A literal represents a fixed value for primitive data types. There are 5 types: String literals (enclosed in single, double, or triple quotes), Character literals (single character in double quotes), Numeric literals (integer, float, complex), Boolean literals (True or False), Literal Collections (List, Tuple, Dictionary, Set), and 1 Special literal (None).",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-rqt7g-14",
     "question": "Q15.What are the new features added in Python 3.9.0.0 version?",
-    "answer": "New features include: New Dictionary functions Merge(|) and Update(|=), New String Methods to Remove Prefixes and Suffixes, Type Hinting Generics in Standard Collections, New Parser based on PEG rather than LL1, New modules like zoneinfo and graphlib, Improved Modules like ast and asyncio, Optimizations, Deprecated functions/commands, and Removal of erroneous methods."
+    "answer": "New features include: New Dictionary functions Merge(|) and Update(|=), New String Methods to Remove Prefixes and Suffixes, Type Hinting Generics in Standard Collections, New Parser based on PEG rather than LL1, New modules like zoneinfo and graphlib, Improved Modules like ast and asyncio, Optimizations, Deprecated functions/commands, and Removal of erroneous methods.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-4j3dx-15",
     "question": "Q16. How is memory managed in Python?",
-    "answer": "Memory management is handled by Python's private heap space containing all objects and data structures, which is inaccessible to the programmer. Allocation is managed by Python's memory manager, and an inbuilt garbage collector recycles unused memory back to the heap space."
+    "answer": "Memory management is handled by Python's private heap space containing all objects and data structures, which is inaccessible to the programmer. Allocation is managed by Python's memory manager, and an inbuilt garbage collector recycles unused memory back to the heap space.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-nysr1-16",
     "question": "Q17. What is namespace in Python?",
-    "answer": "A namespace is a naming system used to make sure that names are unique to avoid naming conflicts."
+    "answer": "A namespace is a naming system used to make sure that names are unique to avoid naming conflicts.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-ozeqx-17",
     "question": "Q18. What is PYTHONPATH?",
-    "answer": "It is an environment variable which is used when a module is imported to check for the presence of the imported modules in various directories, helping the interpreter determine which module to load."
+    "answer": "It is an environment variable which is used when a module is imported to check for the presence of the imported modules in various directories, helping the interpreter determine which module to load.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-x4rz3-18",
     "question": "Q19. What are python modules? Name some commonly used built-in modules in Python?",
-    "answer": "Python modules are .py files containing Python code (functions, classes, or variables). Commonly used built-in modules include os, sys, math, random, datetime, and JSON."
+    "answer": "Python modules are .py files containing Python code (functions, classes, or variables). Commonly used built-in modules include os, sys, math, random, datetime, and JSON.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-h0ye7-19",
     "question": "Q20.What are local variables and global variables in Python?",
-    "answer": "a = 2\n\ndef add():\n    b = 3\n    c = a + b\n    print(c)\n\nadd()\n# Output: 5"
+    "answer": "a = 2\n\ndef add():\n    b = 3\n    c = a + b\n    print(c)\n\nadd()\n# Output: 5",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-zxks5-20",
     "question": "Q21. Is python case sensitive?",
-    "answer": "Yes. Python is a case sensitive language."
+    "answer": "Yes. Python is a case sensitive language.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-sqrx7-21",
     "question": "Q22.What is type conversion in Python?",
-    "answer": "Type conversion refers to the conversion of one data type into another using functions like int(), float(), ord(), hex(), oct(), tuple(), set(), list(), dict(), str(), and complex()."
+    "answer": "Type conversion refers to the conversion of one data type into another using functions like int(), float(), ord(), hex(), oct(), tuple(), set(), list(), dict(), str(), and complex().",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-440he-22",
     "question": "Q23. How to install Python on Windows and set path variable?",
     "answer": "Install python from python.org, locate its path using 'cmd python', then add a new variable named PYTHON_NAME in advanced system settings pasting the path. Then edit the 'path' variable, adding a semicolon and '%PYTHON_HOME%' at the end.",
-    "category": "Advanced Features"
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-cr7kj-23",
     "question": "Q24. Is indentation required in python?",
-    "answer": "Indentation is necessary for Python. It specifies a block of code within loops, classes, functions, etc., usually done using four space characters. Incorrect indentation prevents execution and throws errors."
+    "answer": "Indentation is necessary for Python. It specifies a block of code within loops, classes, functions, etc., usually done using four space characters. Incorrect indentation prevents execution and throws errors.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-jsdpn-24",
     "question": "Q25. What is the difference between Python Arrays and lists?",
-    "answer": "import array as arr\n\nMy_Array = arr.array('i', [1, 2, 3, 4])\nMy_list = [1, 'abc', 1.20]\n\nprint(My_Array)\nprint(My_list)"
+    "answer": "import array as arr\n\nMy_Array = arr.array('i', [1, 2, 3, 4])\nMy_list = [1, 'abc', 1.20]\n\nprint(My_Array)\nprint(My_list)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-z2hwn-25",
     "question": "Q26. What are functions in Python?",
-    "answer": "def Newfunc():\n    print(\"Hi, Welcome to Edureka\")\n\nNewfunc()\n# calling the function"
+    "answer": "def Newfunc():\n    print(\"Hi, Welcome to Edureka\")\n\nNewfunc()\n# calling the function",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-qj1b5-26",
     "question": "Q27.What is __init__?",
     "answer": "class Employee:\n    def __init__(self, name, age, salary):\n        self.name = name\n        self.age = age\n        self.salary = 20000\n\nE1 = Employee(\"XYZ\", 23, 20000)\nprint(E1.name)\nprint(E1.age)\nprint(E1.salary)\n\n# Output:\n# XYZ\n# 23\n# 20000",
-    "category": "OOP Concepts"
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-lj8wr-27",
     "question": "Q28.What is a lambda function?",
-    "answer": "a = lambda x, y : x + y\nprint(a(5, 6))\n# Output: 11"
+    "answer": "a = lambda x, y : x + y\nprint(a(5, 6))\n# Output: 11",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288508116-5tapg-28",
     "question": "Q29. What is self in Python?",
     "answer": "Self is an instance or an object of a class that is explicitly included as the first parameter in Python. It helps differentiate between class methods/attributes and local variables; in the init method it refers to the newly created object.",
-    "category": "OOP Concepts"
+    "category": "OOP Concepts",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-0hgnc-29",
     "question": "Q30.What is the use of Break, Continue and Pass Keyword in Python?",
-    "answer": "Break allows loop termination when a condition is met; Continue allows skipping some part of a loop and transferring control back to the beginning; Pass is a null operation used when a block of code is syntactically required but execution should be skipped."
+    "answer": "Break allows loop termination when a condition is met; Continue allows skipping some part of a loop and transferring control back to the beginning; Pass is a null operation used when a block of code is syntactically required but execution should be skipped.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-43c7a-30",
     "question": "Q31. What does [:: -1] do?",
     "answer": "[::-1] is used to reverse the order of an array or a sequence by reprinting a reversed copy of ordered data structures while leaving the original data structure unchanged.",
-    "category": "Data Structures"
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-b204u-31",
     "question": "Q32. How can you randomize the items of a list in place in Python?",
-    "answer": "from random import shuffle\n\nx = ['Keep', 'The', 'Blue', 'Flag', 'Flying', 'High']\\shuffle(x)\nprint(x)"
+    "answer": "from random import shuffle\n\nx = ['Keep', 'The', 'Blue', 'Flag', 'Flying', 'High']\\shuffle(x)\nprint(x)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-7e7xm-32",
     "question": "Q33. What are python iterators?",
-    "answer": "Iterators are objects which can be traversed through or iterated upon."
+    "answer": "Iterators are objects which can be traversed through or iterated upon.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-bd54h-33",
     "question": "Q34. How can you generate random numbers in Python?",
-    "answer": "Using the standard 'random' module. random.random() returns a floating-point number in the range [0, 1). Other methods include randrange(a, b) for random integers, uniform(a, b) for random floats, and normalvariate(mean, sdev) for normal distributions."
+    "answer": "Using the standard 'random' module. random.random() returns a floating-point number in the range [0, 1). Other methods include randrange(a, b) for random integers, uniform(a, b) for random floats, and normalvariate(mean, sdev) for normal distributions.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-x3pkg-34",
     "question": "Q35. What is the difference between range & xrange?",
-    "answer": "In terms of functionality they generate lists of integers, but range returns a static Python list object at run-time, while xrange returns an xrange object that yields values on demand. xrange is highly recommended for massive ranges or memory-sensitive systems to avoid Memory Errors."
+    "answer": "In terms of functionality they generate lists of integers, but range returns a static Python list object at run-time, while xrange returns an xrange object that yields values on demand. xrange is highly recommended for massive ranges or memory-sensitive systems to avoid Memory Errors.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-f936l-35",
     "question": "Q36. How do you write comments in python?",
-    "answer": "Comments in Python start with a # character. Alternatively, commenting can be done using docstrings enclosed within triple quotes."
+    "answer": "Comments in Python start with a # character. Alternatively, commenting can be done using docstrings enclosed within triple quotes.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-xq29p-36",
     "question": "Q37. What is pickling and unpickling?",
-    "answer": "The pickle module accepts any Python object and converts it into a string representation to dump it into a file using the dump function (pickling). Retrieving the original Python objects from the stored string representation is called unpickling."
+    "answer": "The pickle module accepts any Python object and converts it into a string representation to dump it into a file using the dump function (pickling). Retrieving the original Python objects from the stored string representation is called unpickling.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-jzkjm-37",
     "question": "Q38. What are the generators in python?",
-    "answer": "Functions that return an iterable set of items are called generators."
+    "answer": "Functions that return an iterable set of items are called generators.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-6m27n-38",
     "question": "Q39. How will you capitalize the first letter of string?",
-    "answer": "In Python, the capitalize() method capitalizes the first letter of a string. If it already begins with a capital letter, it returns the original string."
+    "answer": "In Python, the capitalize() method capitalizes the first letter of a string. If it already begins with a capital letter, it returns the original string.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-2dk3e-39",
     "question": "Q40. How will you convert a string to all lowercase?",
-    "answer": "To convert a string to lowercase, the lower() function can be used."
+    "answer": "To convert a string to lowercase, the lower() function can be used.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-hiy9j-40",
     "question": "Q41. How to comment multiple lines in python?",
-    "answer": "All lines to be commented must be prefixed by a #. Alternatively, a shortcut involves holding the ctrl key, left-clicking in multiple places to add your cursor, and typing # once."
+    "answer": "All lines to be commented must be prefixed by a #. Alternatively, a shortcut involves holding the ctrl key, left-clicking in multiple places to add your cursor, and typing # once.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-t4jdt-41",
     "question": "Q42.What are docstrings in Python?",
-    "answer": "Docstrings are documentation strings enclosed within triple quotes. They are not assigned to variables and serve the purpose of comments as well."
+    "answer": "Docstrings are documentation strings enclosed within triple quotes. They are not assigned to variables and serve the purpose of comments as well.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-3wq8f-42",
     "question": "Q43. What is the purpose of ‘is’, ‘not’ and ‘in’ operators?",
-    "answer": "'is' returns true when 2 operands are true/identical; 'not' returns the inverse of the boolean value; 'in' checks if some element is present in some sequence."
+    "answer": "'is' returns true when 2 operands are true/identical; 'not' returns the inverse of the boolean value; 'in' checks if some element is present in some sequence.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-m39nq-43",
     "question": "Q44. What is the usage of help() and dir() function in Python?",
-    "answer": "Both are used from the interpreter for viewing a consolidated dump of built-in functions. help() displays documentation strings for modules, keywords, attributes, etc., while dir() displays defined symbols."
+    "answer": "Both are used from the interpreter for viewing a consolidated dump of built-in functions. help() displays documentation strings for modules, keywords, attributes, etc., while dir() displays defined symbols.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-ybfl5-44",
     "question": "Q45. Whenever Python exits, why isn’t all the memory de-allocated?",
-    "answer": "Modules having circular references to other objects or objects referenced from global namespaces are not always freed. Additionally, portions of memory reserved by the C library are impossible to de-allocate, though Python tries to destroy every other object via its clean-up mechanism."
+    "answer": "Modules having circular references to other objects or objects referenced from global namespaces are not always freed. Additionally, portions of memory reserved by the C library are impossible to de-allocate, though Python tries to destroy every other object via its clean-up mechanism.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-rlpg2-45",
     "question": "Q46. What is a dictionary in Python?",
-    "answer": "A built-in data type that defines a one-to-one relationship between keys and values. Dictionaries contain key-value pairs and are indexed by keys, where order is not important."
+    "answer": "A built-in data type that defines a one-to-one relationship between keys and values. Dictionaries contain key-value pairs and are indexed by keys, where order is not important.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-ekaqn-46",
     "question": "Q47. How can the ternary operators be used in python?",
-    "answer": "# Ternary Assignment\nx, y = 25, 50\nbig = x if x < y else y"
+    "answer": "# Ternary Assignment\nx, y = 25, 50\nbig = x if x < y else y",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-b379w-47",
     "question": "Q48. What does this mean: *args, **kwargs? And why would we use it?",
-    "answer": "We use *args when we aren’t sure how many positional arguments will be passed to a function, or to pass a stored list/tuple. **kwargs is used when we don’t know how many keyword arguments will be passed, or to pass a dictionary as keyword arguments."
+    "answer": "We use *args when we aren’t sure how many positional arguments will be passed to a function, or to pass a stored list/tuple. **kwargs is used when we don’t know how many keyword arguments will be passed, or to pass a dictionary as keyword arguments.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-8nhfx-48",
     "question": "Q49. What does len() do?",
-    "answer": "It is used to determine the length of a string, a list, an array, etc."
+    "answer": "It is used to determine the length of a string, a list, an array, etc.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-vqqsp-49",
     "question": "Q50. Explain split(), sub(), subn() methods of “re” module in Python.",
-    "answer": "These 3 methods modify strings in the 're' module: split() uses a regex pattern to split a string into a list; sub() finds all matching regex substrings and replaces them; subn() works like sub() but also returns the total count of replacements made."
+    "answer": "These 3 methods modify strings in the 're' module: split() uses a regex pattern to split a string into a list; sub() finds all matching regex substrings and replaces them; subn() works like sub() but also returns the total count of replacements made.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-nhwzs-50",
     "question": "Q51. What are negative indexes and why are they used?",
-    "answer": "Negative indexes count from the end of a sequence, starting at '-1' for the last index and '-2' for the penultimate index. They are used to easily reference elements relative to the end, such as removing new-line spaces using S[:-1] or reversing order."
+    "answer": "Negative indexes count from the end of a sequence, starting at '-1' for the last index and '-2' for the penultimate index. They are used to easily reference elements relative to the end, such as removing new-line spaces using S[:-1] or reversing order.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-mw1fw-51",
     "question": "Q52.What are Python packages?",
-    "answer": "Python packages are namespaces containing multiple modules."
+    "answer": "Python packages are namespaces containing multiple modules.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-4iqga-52",
     "question": "Q53. How can files be deleted in Python?",
-    "answer": "To delete a file, you need to import the OS Module and use the os.remove() function passing the file name."
+    "answer": "To delete a file, you need to import the OS Module and use the os.remove() function passing the file name.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-hhgco-53",
     "question": "Q54. What are the different types of variables in Python OOP?",
-    "answer": "Python has built-in categories including Text Type (str), Numeric Types (int, float, complex), Sequence Types (list, tuple, range), Mapping Type (dict), Set Types (set, frozenset), Boolean Type (bool), Binary Types (bytes, bytearray, memoryview), and None Type. Data types can be checked using type()."
+    "answer": "Python has built-in categories including Text Type (str), Numeric Types (int, float, complex), Sequence Types (list, tuple, range), Mapping Type (dict), Set Types (set, frozenset), Boolean Type (bool), Binary Types (bytes, bytearray, memoryview), and None Type. Data types can be checked using type().",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-2mjx2-54",
     "question": "Q55. What advantages do NumPy arrays offer over (nested) Python lists?",
-    "answer": "Lists are general containers but do not support vectorized operations (like elementwise addition) and waste memory storing type information for every element. NumPy arrays offer vectorized and matrix operations, are faster, more efficient, and include built-in features like FFTs, convolutions, fast searching, and linear algebra."
+    "answer": "Lists are general containers but do not support vectorized operations (like elementwise addition) and waste memory storing type information for every element. NumPy arrays offer vectorized and matrix operations, are faster, more efficient, and include built-in features like FFTs, convolutions, fast searching, and linear algebra.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-kz70v-55",
     "question": "Q56.How to add values to a python array?",
-    "answer": "import array as arr\n\na = arr.array('d', [1.1, 2.1, 3.1])\na.append(3.4)\na.extend([4.5, 6.3, 6.8])\na.insert(2, 3.8)\nprint(a)"
+    "answer": "import array as arr\n\na = arr.array('d', [1.1, 2.1, 3.1])\na.append(3.4)\na.extend([4.5, 6.3, 6.8])\na.insert(2, 3.8)\nprint(a)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-d90v1-56",
     "question": "Q57. How to remove values to a python array?",
-    "answer": "import array as arr\n\na = arr.array('d', [1.1, 2.2, 3.8, 3.1, 3.7, 1.2, 4.6])\nprint(a.pop())\nprint(a.pop(3))\na.remove(1.1)\nprint(a)"
+    "answer": "import array as arr\n\na = arr.array('d', [1.1, 2.2, 3.8, 3.1, 3.7, 1.2, 4.6])\nprint(a.pop())\nprint(a.pop(3))\na.remove(1.1)\nprint(a)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288508116-6lhwn-57",
     "question": "Q58.Does Python have OOPS concepts?",
     "answer": "Yes, Python is an object-oriented programming language meaning problems can be solved by creating object models. However, it can also be treated as a procedural or structural language.",
-    "category": "OOP Concepts"
+    "category": "OOP Concepts",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-l9w1q-58",
     "question": "Q59. What is the difference between deep and shallow copy?",
-    "answer": "A shallow copy creates a new instance but copies only reference pointers to the original elements, meaning changes to mutable members affect the original. It executes faster. A deep copy stores copied values by creating completely new independent objects; changes in the original won't affect the copy, making execution slower."
+    "answer": "A shallow copy creates a new instance but copies only reference pointers to the original elements, meaning changes to mutable members affect the original. It executes faster. A deep copy stores copied values by creating completely new independent objects; changes in the original won't affect the copy, making execution slower.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-tj4j4-59",
     "question": "Q60. How is Multithreading achieved in Python?",
-    "answer": "Python features a multi-threading package but uses a Global Interpreter Lock (GIL) ensuring only one thread executes at any one time by passing the lock around. This core sharing adds overhead, meaning multithreading is often not a good idea for speeding up execution."
+    "answer": "Python features a multi-threading package but uses a Global Interpreter Lock (GIL) ensuring only one thread executes at any one time by passing the lock around. This core sharing adds overhead, meaning multithreading is often not a good idea for speeding up execution.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-4shce-60",
     "question": "Q61.What is the process of compilation and linking in python?",
-    "answer": "New extensions must be compiled without error and linked. Steps involve: creating a file (like file.c), putting it in the Modules/ directory, adding a line to Setup.local, running the file via spam file.o, and rebuilding the interpreter using the make command."
+    "answer": "New extensions must be compiled without error and linked. Steps involve: creating a file (like file.c), putting it in the Modules/ directory, adding a line to Setup.local, running the file via spam file.o, and rebuilding the interpreter using the make command.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288508116-xbozl-61",
     "question": "Q62.What are Python libraries? Name a few of them.",
-    "answer": "Python libraries are collections of Python packages. Major examples include NumPy, Pandas, Matplotlib, and Scikit-learn."
+    "answer": "Python libraries are collections of Python packages. Major examples include NumPy, Pandas, Matplotlib, and Scikit-learn.",
+    "category": "Advanced Features",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-4ntm3-62",
     "question": "Q63. What is split used for?",
-    "answer": "The split() method is used to separate a given String into a list in Python."
+    "answer": "The split() method is used to separate a given String into a list in Python.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-31o7o-63",
     "question": "Q64. What are immutable and mutable data types?",
-    "answer": "Mutable data types allow values to be changed after creation (e.g., List, Dictionary, Set) and retain the same memory location. Immutable data types cannot be changed after creation (e.g., Strings, Tuples, Integer); any modification results in a new object and memory location."
+    "answer": "Mutable data types allow values to be changed after creation (e.g., List, Dictionary, Set) and retain the same memory location. Immutable data types cannot be changed after creation (e.g., Strings, Tuples, Integer); any modification results in a new object and memory location.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-au6b3-64",
     "question": "Q65. What is the use of try and except block in Python?",
-    "answer": "try:\n    # Code execution\n    print(\"Evaluating execution stability\")\nexcept Exception as e:\n    # Fallback handler logic\n    print(f\"Encountered structural error: {e}\")"
+    "answer": "try:\n    # Code execution\n    print(\"Evaluating execution stability\")\nexcept Exception as e:\n    # Fallback handler logic\n    print(f\"Encountered structural error: {e}\")",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-vctq9-65",
     "question": "Q66. What is an ordered dictionary in Python?",
-    "answer": "OrderedDict() maintains the exact sequence in which keys are added, preserving insertion order during iteration, whereas a standard dictionary does not guarantee a specific order."
+    "answer": "OrderedDict() maintains the exact sequence in which keys are added, preserving insertion order during iteration, whereas a standard dictionary does not guarantee a specific order.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-9zucr-66",
     "question": "Q67. What is the difference between ‘return’ and ‘yield’ keywords?",
-    "answer": "'return' exits a function and hands back a final value to its caller, running only once. 'yield' produces an intermediate value for generators and suspends execution without destroying local variables, resuming from its last paused state on subsequent calls."
+    "answer": "'return' exits a function and hands back a final value to its caller, running only once. 'yield' produces an intermediate value for generators and suspends execution without destroying local variables, resuming from its last paused state on subsequent calls.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-lzke2-67",
     "question": "Q68. What’s the difference between a set() and a frozenset()?",
-    "answer": "Both store a collection of unique elements. A set is mutable, allowing elements to be added or removed, whereas a frozenset is immutable and cannot be modified after creation."
+    "answer": "Both store a collection of unique elements. A set is mutable, allowing elements to be added or removed, whereas a frozenset is immutable and cannot be modified after creation.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-h9sr8-68",
     "question": "Q69. What are the ways to swap the values of two elements?",
-    "answer": "def swapPositions(list, pos1, pos2):\n    list[pos1], list[pos2] = list[pos2], list[pos1]\n    return list\n\nList = [23, 65, 19, 90]\npos1, pos2 = 1, 3\nprint(swapPositions(List, pos1 - 1, pos2 - 1))"
+    "answer": "def swapPositions(list, pos1, pos2):\n    list[pos1], list[pos2] = list[pos2], list[pos1]\n    return list\n\nList = [23, 65, 19, 90]\npos1, pos2 = 1, 3\nprint(swapPositions(List, pos1 - 1, pos2 - 1))",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-hfk18-69",
     "question": "Q70. How to import modules in python?",
-    "answer": "Modules can be imported using the 'import' keyword in three ways: using the original name (import array), using an alias (import array as arr), or importing everything (from array import *)."
+    "answer": "Modules can be imported using the 'import' keyword in three ways: using the original name (import array), using an alias (import array as arr), or importing everything (from array import *).",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-lfxoh-70",
     "question": "Q71. Explain Inheritance in Python with an example.",
-    "answer": "Inheritance allows a child/derived class to acquire all members (attributes/methods) of a parent/super class for code reusability. Python supports Single, Multi-level, Hierarchical, and Multiple inheritance."
+    "answer": "Inheritance allows a child/derived class to acquire all members (attributes/methods) of a parent/super class for code reusability. Python supports Single, Multi-level, Hierarchical, and Multiple inheritance.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-xjcmf-71",
     "question": "Q72. How are classes created in Python?",
-    "answer": "class Employee:\n    def __init__(self, name):\n        self.name = name\n\nE1 = Employee(\"abc\")\nprint(E1.name)"
+    "answer": "class Employee:\n    def __init__(self, name):\n        self.name = name\n\nE1 = Employee(\"abc\")\nprint(E1.name)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-dcze3-72",
     "question": "Q73. What is monkey patching in Python?",
-    "answer": "class MyClass:\n    def f(self):\n        print(\"f()\")\n\ndef monkey_f(self):\n    print(\"monkey_f()\")\n\n# Run dynamic runtime modifications\nimport m\nm.MyClass.f = monkey_f\nobj = m.MyClass()\nobj.f()"
+    "answer": "class MyClass:\n    def f(self):\n        print(\"f()\")\n\ndef monkey_f(self):\n    print(\"monkey_f()\")\n\n# Run dynamic runtime modifications\nimport m\nm.MyClass.f = monkey_f\nobj = m.MyClass()\nobj.f()",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-smrjz-73",
     "question": "Q74. Does python support multiple inheritance?",
-    "answer": "Yes, Python supports multiple inheritance, allowing a single class to be derived from more than one parent class."
+    "answer": "Yes, Python supports multiple inheritance, allowing a single class to be derived from more than one parent class.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-ms5s3-74",
     "question": "Q75. What is Polymorphism in Python?",
-    "answer": "Polymorphism means the ability to take multiple forms. It allows a child class to have a method with the same name as a method in the parent class but with its own parameters and execution logic."
+    "answer": "Polymorphism means the ability to take multiple forms. It allows a child class to have a method with the same name as a method in the parent class but with its own parameters and execution logic.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-f35hj-75",
     "question": "Q76. Define encapsulation in Python?",
-    "answer": "Encapsulation means binding code and data together into a single unit. A Python class is a prime example of encapsulation."
+    "answer": "Encapsulation means binding code and data together into a single unit. A Python class is a prime example of encapsulation.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-gs35c-76",
     "question": "Q77. How do you do data abstraction in Python?",
-    "answer": "Data Abstraction hides implementation details and only provides required details to the outer world. It can be achieved in Python by using interfaces and abstract classes."
+    "answer": "Data Abstraction hides implementation details and only provides required details to the outer world. It can be achieved in Python by using interfaces and abstract classes.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-nw2gj-77",
     "question": "Q78.Does python make use of access specifiers?",
-    "answer": "Python does not strictly restrict access to variables or functions. Instead, it uses the concept of prefixing a name with a single or double underscore to imitate the behavior of protected and private access specifiers."
+    "answer": "Python does not strictly restrict access to variables or functions. Instead, it uses the concept of prefixing a name with a single or double underscore to imitate the behavior of protected and private access specifiers.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-kwh1y-78",
     "question": "Q79. How to create an empty class in Python?",
-    "answer": "class a:\n    pass\n\nobj = a()\nobj.name = \"xyz\"\nprint(\"Name = \", obj.name)"
+    "answer": "class a:\n    pass\n\nobj = a()\nobj.name = \"xyz\"\nprint(\"Name = \", obj.name)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288508116-7how7-79",
     "question": "Q80. What does an object() do?",
     "answer": "It returns a featureless object that serves as a base for all classes, taking no parameters.",
-    "category": "OOP Concepts"
+    "category": "OOP Concepts",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288508117-en0oa-80",
     "question": "Q81. What do you know about Pandas in Python?",
-    "answer": "Pandas is a data manipulation package for tabular data (rows and columns) known as DataFrames. Its functionality includes sorting, subsets, statistics, reshaping, and joining datasets. It integrates into the PyData ecosystem with NumPy, Matplotlib, Seaborn, and scikit-learn, and handles missing data, reshaping, time series, and text analysis."
+    "answer": "Pandas is a data manipulation package for tabular data (rows and columns) known as DataFrames. Its functionality includes sorting, subsets, statistics, reshaping, and joining datasets. It integrates into the PyData ecosystem with NumPy, Matplotlib, Seaborn, and scikit-learn, and handles missing data, reshaping, time series, and text analysis.",
+    "category": "Advanced Features",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-ldvhe-81",
     "question": "Q82. Define a Dataframe in Pandas?",
-    "answer": "import pandas as pd\n\ndata = {\n    \"Fruits\": [\"Apple\", \"Mango\", \"Orange\"],\n    \"Quantity\": [4, 8, 7]\n}\ndf = pd.DataFrame(data)\nprint(df)"
+    "answer": "import pandas as pd\n\ndata = {\n    \"Fruits\": [\"Apple\", \"Mango\", \"Orange\"],\n    \"Quantity\": [4, 8, 7]\n}\ndf = pd.DataFrame(data)\nprint(df)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-9ta27-82",
     "question": "Q83.How to combine dataframes in pandas?",
-    "answer": "Dataframes can be combined by stacking vertically, stacking horizontally, or joining on a common column (key). pd.concat() handles concatenation, utilizing outer joins for unions or inner joins for intersections."
+    "answer": "Dataframes can be combined by stacking vertically, stacking horizontally, or joining on a common column (key). pd.concat() handles concatenation, utilizing outer joins for unions or inner joins for intersections.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-leuzn-83",
     "question": "Q84.How to create a series from the dictionary object in pandas?",
-    "answer": "import pandas as pd\n\nser_data = {'A': 5, 'B': 10, 'C': 15, 'D': 20, 'E': 25}\nser = pd.Series(ser_data)\nprint(ser)"
+    "answer": "import pandas as pd\n\nser_data = {'A': 5, 'B': 10, 'C': 15, 'D': 20, 'E': 25}\nser = pd.Series(ser_data)\nprint(ser)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-yuj1t-84",
     "question": "Q85. How to identify and deal with missing values in a dataframe?",
-    "answer": "Missing values are identified using the isnull() and notnull() functions, which check whether a value is NaN within a dataframe or series."
+    "answer": "Missing values are identified using the isnull() and notnull() functions, which check whether a value is NaN within a dataframe or series.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-i5god-85",
     "question": "Q86 What is reindexing in Pandas?",
-    "answer": "Reindexing allows you to modify or change a DataFrame’s row and column index structure with reference to other index data structures."
+    "answer": "Reindexing allows you to modify or change a DataFrame’s row and column index structure with reference to other index data structures.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-t0131-86",
     "question": "Q87. How to delete row and column from a dataframe in Pandas?",
-    "answer": "You drop a row or column using the drop() method. Parameters include labels, axis (0 for Rows, 1 for Columns), index/columns, level, inplace (modifies original if True), and errors."
+    "answer": "You drop a row or column using the drop() method. Parameters include labels, axis (0 for Rows, 1 for Columns), index/columns, level, inplace (modifies original if True), and errors.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-yh1e0-87",
     "question": "Q88. How to add new column to pandas dataframe?",
-    "answer": "import pandas as pd\n\ndata = {\n    'Name': ['John', 'Sam', 'Michel', 'Adam', 'Justin'],\n    'Age': [24, 22, 25, 24, 26],\n    'Qualification': ['BE', 'MBA', 'Msc', 'Msc', 'MBA']\n}\ndf = pd.DataFrame(data)\n\n# Column insertion execution\ndf.insert(2, \"GPA\", [4, 3.8, 3, 3.5, 3.6], True)\nprint(df)"
+    "answer": "import pandas as pd\n\ndata = {\n    'Name': ['John', 'Sam', 'Michel', 'Adam', 'Justin'],\n    'Age': [24, 22, 25, 24, 26],\n    'Qualification': ['BE', 'MBA', 'Msc', 'Msc', 'MBA']\n}\ndf = pd.DataFrame(data)\n\n# Column insertion execution\ndf.insert(2, \"GPA\", [4, 3.8, 3, 3.5, 3.6], True)\nprint(df)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-js0t4-88",
     "question": "Q89. How to get items of series A that are not available in another series B?",
-    "answer": "import pandas as pd\n\nps1 = pd.Series([2, 4, 8, 20, 10, 47, 99])\nps2 = pd.Series([1, 3, 6, 4, 10, 99, 50])\n\nres = ps1[~ps1.isin(ps2)]\nprint(res)"
+    "answer": "import pandas as pd\n\nps1 = pd.Series([2, 4, 8, 20, 10, 47, 99])\nps2 = pd.Series([1, 3, 6, 4, 10, 99, 50])\n\nres = ps1[~ps1.isin(ps2)]\nprint(res)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-yro5w-89",
     "question": "Q90. How to get the items that are not common to both the given series A and B?",
-    "answer": "import pandas as pd\n\nsr1 = pd.Series([1, 2, 3, 4, 5])\nsr2 = pd.Series([2, 4, 6, 8, 10])\n\nsr11 = pd.Series(np.union1d(sr1, sr2))\nsr22 = pd.Series(np.intersect1d(sr1, sr2))\nresult = sr11[~sr11.isin(sr22)]\nprint(result)"
+    "answer": "import pandas as pd\n\nsr1 = pd.Series([1, 2, 3, 4, 5])\nsr2 = pd.Series([2, 4, 6, 8, 10])\n\nsr11 = pd.Series(np.union1d(sr1, sr2))\nsr22 = pd.Series(np.intersect1d(sr1, sr2))\nresult = sr11[~sr11.isin(sr22)]\nprint(result)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-dex1b-90",
     "question": "Q91. Write a program in Python to execute the Bubble sort algorithm.",
-    "answer": "def bs(a):\n    b = len(a) - 1\n    for x in range(b):\n        for y in range(b - x):\n            if a[y] > a[y + 1]:\n                a[y], a[y + 1] = a[y + 1], a[y]\n\na = [32, 5, 3, 6, 7, 54, 87]\nbs(a)\nprint(a)"
+    "answer": "def bs(a):\n    b = len(a) - 1\n    for x in range(b):\n        for y in range(b - x):\n            if a[y] > a[y + 1]:\n                a[y], a[y + 1] = a[y + 1], a[y]\n\na = [32, 5, 3, 6, 7, 54, 87]\nbs(a)\nprint(a)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-wf6hy-91",
     "question": "Q92. Write a program in Python to produce Star triangle.",
-    "answer": "def pyfunc(r):\n    for x in range(r):\n        print(' ' * (r - x - 1) + '*' * (2 * x + 1))\n\npyfunc(9)"
+    "answer": "def pyfunc(r):\n    for x in range(r):\n        print(' ' * (r - x - 1) + '*' * (2 * x + 1))\n\npyfunc(9)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-e6gv5-92",
     "question": "Q93. Write a program to produce Fibonacci series in Python.",
-    "answer": "a = int(input(\"Enter the terms: \"))\nf = 0\ns = 1\n\nif a <= 1:\n    print(\"The requested series is\", f)\nelse:\n    print(f, s, end=\" \")\n    for x in range(2, a):\n        next_term = f + s\n        print(next_term, end=\" \")\n        f = s\n        s = next_term"
+    "answer": "a = int(input(\"Enter the terms: \"))\nf = 0\ns = 1\n\nif a <= 1:\n    print(\"The requested series is\", f)\nelse:\n    print(f, s, end=\" \")\n    for x in range(2, a):\n        next_term = f + s\n        print(next_term, end=\" \")\n        f = s\n        s = next_term",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-womfd-93",
     "question": "Q94. Write a program in Python to check if a number is prime.",
-    "answer": "a = int(input(\"Enter number: \"))\n\nif a > 1:\n    for x in range(2, a):\n        if (a % x) == 0:\n            print(\"not prime\")\n            break\n    else:\n        print(\"Prime\")\nelse:\n    print(\"not prime\")"
+    "answer": "a = int(input(\"Enter number: \"))\n\nif a > 1:\n    for x in range(2, a):\n        if (a % x) == 0:\n            print(\"not prime\")\n            break\n    else:\n        print(\"Prime\")\nelse:\n    print(\"not prime\")",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-g5of9-94",
     "question": "Q95. Write a program in Python to check if a sequence is a Palindrome.",
-    "answer": "a = input(\"Enter sequence: \")\nb = a[::-1]\n\nif a == b:\n    print(\"palindrome\")\nelse:\n    print(\"Not a Palindrome\")"
+    "answer": "a = input(\"Enter sequence: \")\nb = a[::-1]\n\nif a == b:\n    print(\"palindrome\")\nelse:\n    print(\"Not a Palindrome\")",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-zgopn-95",
     "question": "Q96. Write a one-liner that will count the number of capital letters in a file. Your code should work even if the file is too big to fit in memory.",
-    "answer": "with open(SOME_LARGE_FILE) as fh:\n    count = sum(1 for line in fh for character in line if character.isupper())"
+    "answer": "with open(SOME_LARGE_FILE) as fh:\n    count = sum(1 for line in fh for character in line if character.isupper())",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-h0kdl-96",
     "question": "Q97. Write a sorting algorithm for a numerical dataset in Python.",
-    "answer": "list = [\"1\", \"4\", \"0\", \"6\", \"9\"]\nlist = [int(i) for i in list]\nlist.sort()\nprint(list)"
+    "answer": "list = [\"1\", \"4\", \"0\", \"6\", \"9\"]\nlist = [int(i) for i in list]\nlist.sort()\nprint(list)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-g5zka-97",
     "question": "Q98. Looking at the below code, write down the final values of A0, A1, …An.",
-    "answer": "Final outputs are: A0 = dictionary of zipped elements, A1 = range(0, 10), A2 = [], A3 = [1, 2, 3, 4, 5], A4 = [1, 2, 3, 4, 5], A5 = dict of squares up to 9, A6 = nested list of numbers paired with their squares."
+    "answer": "Final outputs are: A0 = dictionary of zipped elements, A1 = range(0, 10), A2 = [], A3 = [1, 2, 3, 4, 5], A4 = [1, 2, 3, 4, 5], A5 = dict of squares up to 9, A6 = nested list of numbers paired with their squares.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-nslqn-98",
     "question": "Q99. Write a program in Python to print the given number is odd or even.",
-    "answer": "def check_odd_even(number):\n    if number % 2 == 0:\n        print(f\"{number} is even.\")\n    else:\n        print(f\"{number} is odd.\")\n\nnum = int(input(\"Enter a number: \"))\ncheck_odd_even(num)"
+    "answer": "def check_odd_even(number):\n    if number % 2 == 0:\n        print(f\"{number} is even.\")\n    else:\n        print(f\"{number} is odd.\")\n\nnum = int(input(\"Enter a number: \"))\ncheck_odd_even(num)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-kf1qp-99",
     "question": "Q100. Write a program to check if the given number is Armstrong or not.",
-    "answer": "def is_armstrong(num):\n    num_digits = len(str(num))\n    sum = 0\n    temp = num\n    while temp > 0:\n        digit = temp % 10\n        sum += digit ** num_digits\n        temp //= 10\n    return num == sum\n\nnumber = int(input(\"Enter a number: \"))\nif is_armstrong(number):\n    print(f\"{number} is an Armstrong number.\")\nelse:\n    print(f\"{number} is not an Armstrong number.\")"
+    "answer": "def is_armstrong(num):\n    num_digits = len(str(num))\n    sum = 0\n    temp = num\n    while temp > 0:\n        digit = temp % 10\n        sum += digit ** num_digits\n        temp //= 10\n    return num == sum\n\nnumber = int(input(\"Enter a number: \"))\nif is_armstrong(number):\n    print(f\"{number} is an Armstrong number.\")\nelse:\n    print(f\"{number} is not an Armstrong number.\")",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-2lkr0-100",
     "question": "Q101. Write a Python Program for calculating simple interest.",
-    "answer": "def calculate_simple_interest(principal, rate, time):\n    simple_interest = (principal * rate * time) / 100\n    return simple_interest\n\nprincipal = float(input(\"Enter the principal amount: \"))\nrate = float(input(\"Enter the annual interest rate: \"))\ntime = float(input(\"Enter the time period: \"))\nprint(calculate_simple_interest(principal, rate, time))"
+    "answer": "def calculate_simple_interest(principal, rate, time):\n    simple_interest = (principal * rate * time) / 100\n    return simple_interest\n\nprincipal = float(input(\"Enter the principal amount: \"))\nrate = float(input(\"Enter the annual interest rate: \"))\ntime = float(input(\"Enter the time period: \"))\nprint(calculate_simple_interest(principal, rate, time))",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-f43da-101",
     "question": "Q102. Write a Python program to check whether the string is Symmetrical or Palindrome.",
-    "answer": "def is_symmetrical(input_string):\n    return input_string == input_string[::-1]\n\ndef is_palindrome(input_string):\n    input_string = input_string.replace(\" \", \"\").lower()\n    return input_string == input_string[::-1]"
+    "answer": "def is_symmetrical(input_string):\n    return input_string == input_string[::-1]\n\ndef is_palindrome(input_string):\n    input_string = input_string.replace(\" \", \"\").lower()\n    return input_string == input_string[::-1]",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-68xcg-102",
     "question": "Q104. Write a Python program to find yesterday’s, today’s and tomorrow’s date.",
-    "answer": "from datetime import datetime, timedelta\n\ndef get_dates():\n    today = datetime.now().date()\n    yesterday = today - timedelta(days=1)\n    tomorrow = today + timedelta(days=1)\n    return yesterday, today, tomorrow"
+    "answer": "from datetime import datetime, timedelta\n\ndef get_dates():\n    today = datetime.now().date()\n    yesterday = today - timedelta(days=1)\n    tomorrow = today + timedelta(days=1)\n    return yesterday, today, tomorrow",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-8udi9-103",
     "question": "Q105. Explain what Flask is and its benefits?",
-    "answer": "Flask is a web microframework for Python based on Werkzeug and Jinja2 with low to no dependencies on external libraries. It is lightweight, has fewer security bugs, and utilizes signed cookies for sessions which require a secret key (Flask.secret_key) to modify."
+    "answer": "Flask is a web microframework for Python based on Werkzeug and Jinja2 with low to no dependencies on external libraries. It is lightweight, has fewer security bugs, and utilizes signed cookies for sessions which require a secret key (Flask.secret_key) to modify.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-9jb9a-104",
     "question": "Q106. Is Django better than Flask?",
-    "answer": "Both map browser URLs to Python functions. Flask is simpler and allows users to write their own custom details/code, whereas Django comes with extensive prewritten code that handles tasks automatically. Both are equally good with their own pros and cons."
+    "answer": "Both map browser URLs to Python functions. Flask is simpler and allows users to write their own custom details/code, whereas Django comes with extensive prewritten code that handles tasks automatically. Both are equally good with their own pros and cons.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-do1vg-105",
     "question": "Q107. Mention the differences between Django, Pyramid and Flask.",
-    "answer": "Flask is a ready-to-use microframework for small applications with simpler requirements that relies on external libraries. Pyramid is a highly configurable framework for large applications offering massive flexibility to select databases, URL structures, and templating. Django is also built for large applications and comes built-in with an ORM."
+    "answer": "Flask is a ready-to-use microframework for small applications with simpler requirements that relies on external libraries. Pyramid is a highly configurable framework for large applications offering massive flexibility to select databases, URL structures, and templating. Django is also built for large applications and comes built-in with an ORM.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-nj6yv-106",
     "question": "Q108. Discuss Django architecture.",
-    "answer": "Django follows the MVT (Model-View-Template) pattern. The developer creates the Model, View, and Template, maps it to a URL, and Django automatically serves it to the user."
+    "answer": "Django follows the MVT (Model-View-Template) pattern. The developer creates the Model, View, and Template, maps it to a URL, and Django automatically serves it to the user.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-y69fj-107",
     "question": "Q109. Explain how you can set up the Database in Django.",
-    "answer": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),\n    }\n}"
+    "answer": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),\n    }\n}",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-wzsck-108",
     "question": "Q110. Give an example how you can write a VIEW in Django?",
-    "answer": "from django.http import HttpResponse\nimport datetime\n\ndef Current_datetime(request):\n    now = datetime.datetime.now()\n    html = \"<html><body>It is now %s.</body></html>\" % now\n    return HttpResponse(html)"
+    "answer": "from django.http import HttpResponse\nimport datetime\n\ndef Current_datetime(request):\n    now = datetime.datetime.now()\n    html = \"<html><body>It is now %s.</body></html>\" % now\n    return HttpResponse(html)",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-0vfzd-109",
     "question": "Q111. Mention what the Django templates consist of.",
-    "answer": "A template is a simple text file that can create formats like XML, CSV, or HTML. It contains variables replaced with runtime values and tags (% tag %) that control template logic."
+    "answer": "A template is a simple text file that can create formats like XML, CSV, or HTML. It contains variables replaced with runtime values and tags (% tag %) that control template logic.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-mefn2-110",
     "question": "Q112. Explain the use of session in Django framework?",
-    "answer": "Django provides a session system to store and retrieve data per site-visitor. It places a session ID cookie on the client side and stores actual related data securely on the server side."
+    "answer": "Django provides a session system to store and retrieve data per site-visitor. It places a session ID cookie on the client side and stores actual related data securely on the server side.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-pq7a3-111",
     "question": "Q113. List out the inheritance styles in Django.",
-    "answer": "There are three inheritance styles: Abstract Base Classes (parent class holds information you don't want to retype for each child), Multi-table Inheritance (sub-classing an existing model where each model requires its own database table), and Proxy models (modifying Python-level behavior without changing fields)."
+    "answer": "There are three inheritance styles: Abstract Base Classes (parent class holds information you don't want to retype for each child), Multi-table Inheritance (sub-classing an existing model where each model requires its own database table), and Proxy models (modifying Python-level behavior without changing fields).",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-19ens-112",
     "question": "Q114. What is Numpy in Python?",
-    "answer": "NumPy is the fundamental package for scientific computing in Python. It provides multidimensional array objects, derived objects (matrices, masked arrays), and routines for mathematical, logical, shape manipulation, sorting, linear algebra, statistics, and Fourier transforms."
+    "answer": "NumPy is the fundamental package for scientific computing in Python. It provides multidimensional array objects, derived objects (matrices, masked arrays), and routines for mathematical, logical, shape manipulation, sorting, linear algebra, statistics, and Fourier transforms.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-fpwpr-113",
     "question": "Q115. How to create 1D, 2D and 3D arrays?",
-    "answer": "import numpy as np\n\n# 1D\narr_1d = np.array([100, 200, 300, 400])\n\n# 2D\narr_2d = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])\n\n# 3D\narr_3d = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])"
+    "answer": "import numpy as np\n\n# 1D\narr_1d = np.array([100, 200, 300, 400])\n\n# 2D\narr_2d = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])\n\n# 3D\narr_3d = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-a2gsu-114",
     "question": "Q116. How to load data using txt file using numpy?",
-    "answer": "You can use the numpy.loadtxt() function, specifying the file name, data type (dtype), comments characters, delimiters, and rows to skip."
+    "answer": "You can use the numpy.loadtxt() function, specifying the file name, data type (dtype), comments characters, delimiters, and rows to skip.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-2vev7-115",
     "question": "Q117. How to read CSV data into an array in NumPy?",
-    "answer": "You read CSV files using numpy.loadtxt() while specifying the delimiter parameter as a comma (delimiter=\",\")."
+    "answer": "You read CSV files using numpy.loadtxt() while specifying the delimiter parameter as a comma (delimiter=\",\").",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-pqkt6-116",
     "question": "Q118. How to reverse the numpy array using one line of code?",
-    "answer": "To reverse a numpy array in one line, you can use the flip() function in NumPy."
+    "answer": "To reverse a numpy array in one line, you can use the flip() function in NumPy.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-ybt2v-117",
     "question": "Q119. How To Save An Image Locally Using Python Whose URL Address I Already Know?",
-    "answer": "import urllib.request\nurllib.request.urlretrieve(\"URL\", \"local-filename.jpg\")"
+    "answer": "import urllib.request\nurllib.request.urlretrieve(\"URL\", \"local-filename.jpg\")",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-u9syi-118",
     "question": "Q120. How can you Get the Google cache age of any URL or web page?",
-    "answer": "Append the destination web address to the Google cache URL search path format: http://webcache.googleusercontent.com/search?q=cache:URLGOESHERE."
+    "answer": "Append the destination web address to the Google cache URL search path format: http://webcache.googleusercontent.com/search?q=cache:URLGOESHERE.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-i87bb-119",
     "question": "Q121. You are required to scrap data from IMDb top 250 movies page. It should only have fields movie name, year, and rating.",
-    "answer": "from bs4 import BeautifulSoup\nimport requests\n\nurl = 'http://www.imdb.com/chart/top'\nresponse = requests.get(url)\nsoup = BeautifulSoup(response.text, 'html.parser')\n# Data extraction filter iteration logic goes here"
+    "answer": "from bs4 import BeautifulSoup\nimport requests\n\nurl = 'http://www.imdb.com/chart/top'\nresponse = requests.get(url)\nsoup = BeautifulSoup(response.text, 'html.parser')\n# Data extraction filter iteration logic goes here",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-kxjcf-120",
     "question": "Q122. What is map function in Python?",
-    "answer": "The map function executes a function given as the first argument on all elements of an iterable given as the second argument. If the function expects multiple arguments, multiple iterables can be provided."
+    "answer": "The map function executes a function given as the first argument on all elements of an iterable given as the second argument. If the function expects multiple arguments, multiple iterables can be provided.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-wj5y4-121",
     "question": "Q123. Is python numpy better than lists?",
-    "answer": "Yes, NumPy arrays are preferred over traditional python lists for three major reasons: they take Less Memory, have Faster execution, and are highly Convenient."
+    "answer": "Yes, NumPy arrays are preferred over traditional python lists for three major reasons: they take Less Memory, have Faster execution, and are highly Convenient.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-5cdc9-122",
     "question": "Q124. How to get indices of N maximum values in a NumPy array?",
-    "answer": "import numpy as np\narr = np.array([1, 3, 2, 4, 5])\nprint(arr.argsort()[-3:][::-1])"
+    "answer": "import numpy as np\narr = np.array([1, 3, 2, 4, 5])\nprint(arr.argsort()[-3:][::-1])",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-bk9cr-123",
     "question": "Q125. How do you calculate percentiles with Python/ NumPy?",
-    "answer": "You use the np.percentile() function, passing the array data and the desired percentile number (e.g., 50 for the median)."
+    "answer": "You use the np.percentile() function, passing the array data and the desired percentile number (e.g., 50 for the median).",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-8doof-124",
     "question": "Q126. What is the difference between NumPy and SciPy?",
     "answer": "NumPy (Numerical Python) focuses on basic array operations and has fewer core scientific features/linear algebra modules. SciPy (Scientific Python) contains mostly new advanced scientific computing algorithms and fully-featured linear algebra or numerical modules, though it features a slower computational speed than NumPy.",
-    "category": "Advanced Features"
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288508117-vdr2h-125",
     "question": "Q127. How do you make 3D plots/visualizations using NumPy/SciPy?",
-    "answer": "3D graphics rely on external integration packages. Matplotlib provides foundational 3D graph plots within its mplot3d subpackage, whereas Mayavi offers high-quality 3D visualizations backed by the VTK engine."
+    "answer": "3D graphics rely on external integration packages. Matplotlib provides foundational 3D graph plots within its mplot3d subpackage, whereas Mayavi offers high-quality 3D visualizations backed by the VTK engine.",
+    "category": "Advanced Features",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-50tp7-126",
     "question": "Q128. Which of the following statements create a dictionary? (Multiple Correct Answers Possible)",
-    "answer": "Answers: b, c & d. Dictionaries are created by specifying keys and values inside curly braces (or parentheses configurations depending on mapping parameters)."
+    "answer": "Answers: b, c & d. Dictionaries are created by specifying keys and values inside curly braces (or parentheses configurations depending on mapping parameters).",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-4tkmu-127",
     "question": "Q129. Which one of these is floor division?",
-    "answer": "Answer: b) //. When both operands are integers, standard division may chop off fractions in old behaviors, but floor division using // specifically outputs full round-off or precise division values based on conditions."
+    "answer": "Answer: b) //. When both operands are integers, standard division may chop off fractions in old behaviors, but floor division using // specifically outputs full round-off or precise division values based on conditions.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-nonvb-128",
     "question": "Q130. What is the maximum possible length of an identifier?",
-    "answer": "Answer: d) None of the above. Identifiers in Python can be of any length."
+    "answer": "Answer: d) None of the above. Identifiers in Python can be of any length.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-y69v7-129",
     "question": "Q131. Why are local variable names beginning with an underscore discouraged?",
-    "answer": "Answer: a) they are used to indicate a private variable of a class. Since Python has no strict private access modifiers, leading underscores warn users that variables should not be accessed from outside the class."
+    "answer": "Answer: a) they are used to indicate a private variable of a class. Since Python has no strict private access modifiers, leading underscores warn users that variables should not be accessed from outside the class.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-dplxk-130",
     "question": "Q132. Which of the following is an invalid statement?",
-    "answer": "Answer: b) a b c = 1000 2000 3000. Spaces are strictly forbidden within variable identifier names."
+    "answer": "Answer: b) a b c = 1000 2000 3000. Spaces are strictly forbidden within variable identifier names.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-gj0rq-131",
     "question": "Q133. What is the output of the following?",
-    "answer": "Answer: c) invalid code. Exception instances must explicitly inherit from a BaseException class; raw strings cannot be raised directly like this."
+    "answer": "Answer: c) invalid code. Exception instances must explicitly inherit from a BaseException class; raw strings cannot be raised directly like this.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288508117-r28yd-132",
     "question": "Q134. Suppose list1 is [2, 33, 222, 14, 25], What is list1[-1] ?",
-    "answer": "Answer: c) 25. The negative index -1 accurately targets the absolute final index element of a sequence list."
+    "answer": "Answer: c) 25. The negative index -1 accurately targets the absolute final index element of a sequence list.",
+    "category": "Data Structures",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-p1pfl-133",
     "question": "Q135. To open a file c:scores.txt for writing, we use",
-    "answer": "Answer: b) outfile = open(“c:scores.txt”, “w”). The parameter 'w' signifies that the file handler is configured specifically for write tracking."
+    "answer": "Answer: b) outfile = open(“c:scores.txt”, “w”). The parameter 'w' signifies that the file handler is configured specifically for write tracking.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-p7t5g-134",
     "question": "Q136. What is the output of the following?",
-    "answer": "Answer: a) True. Utilizing a 'with' context manager statement with open() guarantees the targeted file cleanly closes immediately upon exiting the block scope."
+    "answer": "Answer: a) True. Utilizing a 'with' context manager statement with open() guarantees the targeted file cleanly closes immediately upon exiting the block scope.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   },
   {
+    "id": "q-1782288260767-qb4l6-135",
     "question": "Q137. When will the else part of try-except-else be executed?",
-    "answer": "Answer: c) when no exception occurs. The optional else block segment triggers exclusively if the try clause evaluates safely without any exceptions."
+    "answer": "Answer: c) when no exception occurs. The optional else block segment triggers exclusively if the try clause evaluates safely without any exceptions.",
+    "category": "Syntax & Basics",
+    "upvotes": 0,
+    "downvotes": 0
   }
 ]

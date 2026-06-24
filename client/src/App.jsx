@@ -210,31 +210,31 @@ export default function App() {
             const prev = history[id];
             const isUp = type === 'upvote';
 
-            // compute new local state deterministically using functional setter
+            // Determine what action we are sending to the backend
+            let action = 'increment'; 
+            if (prev === type) action = 'undo';
+            else if (prev && prev !== type) action = 'switch';
+
+            // Update UI State Optimistically
             setFaqs(prevFaqs => prevFaqs.map(item => {
                 if (!item.id || String(item.id) !== String(id)) return item;
                 const up = Number(item.upvotes) || 0;
                 const down = Number(item.downvotes) || 0;
 
-                if (prev === type) {
-                    // undo previous vote
+                if (action === 'undo') {
                     return {
                         ...item,
                         upvotes: isUp ? Math.max(0, up - 1) : up,
                         downvotes: isUp ? down : Math.max(0, down - 1)
                     };
                 }
-
-                if (prev && prev !== type) {
-                    // switch vote: remove previous, add new
+                if (action === 'switch') {
                     return {
                         ...item,
                         upvotes: isUp ? up + 1 : Math.max(0, up - 1),
                         downvotes: isUp ? Math.max(0, down - 1) : down + 1
                     };
                 }
-
-                // fresh vote
                 return {
                     ...item,
                     upvotes: isUp ? up + 1 : up,
@@ -242,30 +242,32 @@ export default function App() {
                 };
             }));
 
-            // update vote history
-            if (prev === type) {
-                const updated = { ...history };
-                delete updated[id];
-                setVotedItems(updated);
-                localStorage.setItem('faq_votes', JSON.stringify(updated));
-            } else {
-                const updated = { ...history, [id]: type };
-                setVotedItems(updated);
-                localStorage.setItem('faq_votes', JSON.stringify(updated));
-            }
+            // Sync structural history memory
+            const updated = { ...history };
+            if (action === 'undo') delete updated[id];
+            else updated[id] = type;
+            setVotedItems(updated);
+            localStorage.setItem('faq_votes', JSON.stringify(updated));
 
-            // single server call to persist the intent
+            // Network synchronization
             try {
-                await fetch(`/api/${id}/vote`, {
+                const res = await fetch(`/api/${id}/vote`, {
                     method: 'PATCH',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ type })
+                    body: JSON.stringify({ type, action }) // Now passing action context!
                 });
+                const serverData = await res.json();
+                if (res.ok && serverData.item) {
+                    // Lock the local UI state directly to the database file truth
+                    setFaqs(prevFaqs => prevFaqs.map(item => 
+                        String(item.id) === String(id) ? serverData.item : item
+                    ));
+                }
             } catch (e) {
-                // ignore server persistence errors for now
+                console.error("Server syncing delayed:", e);
             }
         } catch (err) {
-            console.error('Voting error:', err);
+            console.error('Voting layout roadblock:', err);
         }
     };
 
