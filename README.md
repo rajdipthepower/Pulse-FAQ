@@ -1,117 +1,88 @@
-# ⚡ PulseFAQ — Crowd‑Sourced Q&A Platform (Filesystem‑Backed)
+*** Python Interview FAQ & Preparation Portal
 
-PulseFAQ is a lightweight, real‑time crowdsourced Q&A engine tailored for academic communities (IACS). The app combines a Vite + React frontend with a small Express backend that persists data to local JSON files — ideal for prototypes, teaching demos, and small teams that want an easy self‑hosted FAQ workflow.
+Python Interview FAQ & Preparation Portal is a full-stack web application built with React (Vite) and Express. It helps users browse, search, upvote, and contribute community-driven Python interview questions and answers while providing admins with a lightweight moderation dashboard.
 
-## Project Overview
+**Why this project:** Tailored for engineers preparing for Python interviews, the app organizes questions into interview-focused categories, supports live searching and upvoting, and offers an admin-facing moderation workflow — all using simple, filesystem-backed storage for easy self-hosting and demos.
 
-- **Purpose:** Provide a simple way for users to submit questions anonymously, and for trusted admins to curate, categorize, and publish authoritative answers.
-- **Audience:** Course staff, student groups, campus teams or small organizations that need a moderated knowledge base without a heavyweight database.
-- **Stack:** React (Vite) frontend, Express backend, local JSON files (`data/faqs.json`, `data/pending_aqs.json`).
+**Audience:** Job seekers, mentors, interviewers, and study groups looking for a collaborative, searchable repository of Python interview questions.
 
-## Core Features
+**Data storage:** Local JSON files: `data/faqs.json` (approved/public FAQs) and `data/pending_aqs.json` (pending submissions).
 
-- **Anonymous Crowdsourcing:** Anyone can post a question anonymously. Submissions land in a pending queue for staff review.
-- **Admin Moderation Desk:** Admins receive pending AQs, can write official answers, assign categories (General, Technical, Admission, Research), and publish to the public feed either individually or in bulk.
-- **Dynamic Sorting & Upvoting:** Live FAQs support upvotes/downvotes; the UI sorts by popularity (upvotes) and supports simple chronological views.
-- **Smart Category Filtering:** Dedicated category tabs — **General**, **Technical**, **Admission**, **Research** — with client logic treating missing categories as **General** so uncategorized items still appear in the main stream.
+**Table of contents**
 
-## System Architecture & Data Flow
+- Project Title & Description
+- Core Features
+- Tech Stack
+- Local Installation & Setup
+- Admin Quick Start
+- Data Files
+- Contributing & Notes
 
-ASCII sketch:
+**Project Title & Description**
 
-Frontend (Vite) :5173
-    |
-    |  (dev proxy) `/api/*`
-    v
-Backend (Express) :4000
-    ├─ `GET  /api`  -> returns sanitized array of approved FAQs (from `data/faqs.json`)
-    ├─ `POST /api/aqs` -> add/merge into `data/pending_aqs.json`
-    ├─ `POST /api/admin/approve` -> move item from `pending_aqs.json` -> `faqs.json`
-    └─ other admin and faq endpoints (vote, edit, delete)
+- **Title:** Python Interview FAQ & Preparation Portal
+- **Description:** A full-stack web application built with React (Vite) and Express to manage, filter, upvote, and moderate Python programming interview questions.
 
-Data files (on disk):
-  - `data/faqs.json`         (approved, publicly visible items)
-  - `data/pending_aqs.json`  (anonymous submissions awaiting moderation)
+**Core Features**
 
-Lifecycle trace (typical question flow):
-1. User submits anonymously -> frontend POSTs to `POST /api/aqs`.
-2. Backend validates and appends (or increments an existing pending item) in `pending_aqs.json`.
-3. Admin opens the Moderation Desk (`GET /api/admin/pending`), writes an answer, picks a category, and clicks **Answer & Approve**.
-4. Admin action `POST /api/admin/approve` moves the item from `pending_aqs.json` into `faqs.json` (written to disk).
-5. The frontend triggers an immediate refresh (`fetch('/api')`) and the new FAQ appears in the public feed under its assigned category.
+- **Dynamic Category Filtering:** Browse questions by four interview-focused categories: `Syntax & Basics`, `OOP Concepts`, `Data Structures`, and `Advanced Features`.
+- **Live Search:** Instant, case-insensitive keyword searching across questions and answers for fast lookup.
+- **Upvoting System:** Community-driven upvotes with local state tracking to prevent duplicate voting during a session.
+- **Admin Moderation Dashboard:** Review anonymous user submissions, approve or reject pending FAQs, and inline-edit existing questions (including live category updates and answer edits).
+- **Code-Snippets Ready:** Rich multi-line code block formatting with whitespace-preserving rendering so Python scripts and examples display cleanly.
 
-## Technical Design Decisions
+**Tech Stack**
 
-- **Implicit Schema & Fallback IDs**: The stored objects are intentionally minimal (question/answer, counters, optional category). To provide stable keys for React list rendering and older datasets that lack explicit `id` fields, the server injects fallback identifiers on read like `faq-<index>` (e.g., `faq-12`). These fallback IDs are produced at response time and are not forced into disk unless an explicit ID exists.
+- **Frontend:** React (Vite), Tailwind CSS
+- **Backend:** Node.js, Express
+- **Storage:** Local JSON files (`data/faqs.json`, `data/pending_aqs.json`)
 
-- **Category Handling**: The client treats missing or empty `category` fields as `General` (case‑insensitive). This ensures uncategorized items appear under the **General** tab without extra admin work.
-
-- **Optimistic UI & State Synchronization**: For a snappy UX, the app performs optimistic changes (e.g., vote increments) and immediately refetches authoritative lists after mutations. Key write flows call `fetch('/api')` after publish/approve/delete so the UI resynchronizes without requiring a browser reload.
-
-- **Filesystem Persistence**: Using `fs.promises` to read/write `JSON.stringify(data, null, 2)` keeps the implementation simple and transparent. This is suitable for single‑server prototypes; for production, migrate to a transactional DB and secure authentication.
-
-## API Reference (common endpoints)
-
-- `GET /api` — returns the array of approved FAQs (server sanitizes and ensures every item has an `id` string for the UI).
-- `POST /api/aqs` — submit anonymous question. Body: `{ "question": "..." }`.
-- `POST /api/admin/login` — admin login (static credentials in prototype). Body: `{ email, password }`.
-- `GET /api/admin/pending` — list pending AQs (requires admin token header `x-admin-token`).
-- `POST /api/admin/approve` — approve a pending AQ. Body: `{ id, answer, category }`.
-- `POST /api/admin/publish` — publish a new FAQ directly. Body: `{ question, answer, category, isFAQ }`.
-- `PATCH /api/:id/vote` — increment upvote/downvote on a published FAQ.
-- `PUT /api/:id` — edit a published FAQ (admin only).
-- `DELETE /api/:id` — delete a published FAQ (admin only).
-
-Note: the Express router mounts the FAQ routes at `/api` in dev proxy setups so the client can `fetch('/api')` in development.
-
-## How to Run (local development)
+**Local Installation & Setup**
 
 Prerequisites: Node.js (16+ recommended) and npm.
 
-From the repository root open two PowerShell terminals.
+Open two PowerShell terminals from the repository root.
 
-Terminal 1 — start backend:
+Terminal 1 — Backend
 ```powershell
-cd "c:\Users\user\Desktop\CURSOR IDE\team-6a314e2012663badc7eb1814\server"
+cd .\server
 npm install
 npm start
 ```
 
-Terminal 2 — start frontend (Vite dev server):
+Terminal 2 — Frontend
 ```powershell
-cd "c:\Users\user\Desktop\CURSOR IDE\team-6a314e2012663badc7eb1814\client"
+cd .\client
 npm install
 npm run dev
 ```
 
-Vite (frontend) typically runs at `http://localhost:5173` and is configured to proxy `/api` to the Express server (default `http://localhost:4000`).
+Notes:
+- The frontend runs via Vite (usually at `http://localhost:5173`) and the dev proxy forwards `/api` to the Express backend (by default `http://localhost:4000`).
+- If you prefer a single terminal, you can use a multiplexer or run the frontend and backend in background processes, but two terminals keep logs separate.
 
-## Admin Quick Start
+**Admin Quick Start**
 
-1. Open the client app and go to the Admin panel.
-2. Login using the prototype credentials (see server config) — the app stores a static token in `localStorage` under `admin_token`.
-3. Use the **Moderation Desk** to answer and approve pending AQs, or use **Manual FAQ Insertion** to publish directly.
+1. Open the client app in your browser and navigate to the Admin panel.
+2. Login with the prototype credentials found in the server config (for production, replace this with a proper auth flow). The app stores the admin token in `localStorage` under `admin_token`.
+3. Use the Moderation Desk to review pending submissions, write answers, assign categories, and click **Approve** to publish.
 
-> Tip: After publishing or approving an item the client triggers a `fetch('/api')` to refresh the public feed automatically.
+**Data Files**
 
-## Data Files
+- `data/faqs.json` — approved/public FAQs (array)
+- `data/pending_aqs.json` — pending anonymous submissions (array)
 
-- `data/faqs.json` — approved FAQs (single JSON array)
-- `data/pending_aqs.json` — pending anonymous AQs (single JSON array)
+Back up these files before experimenting or migrating to a database.
 
-Backups: keep a copy of these files when you run experiments or migrate to a database.
+**Contributing & Notes**
 
-## Notes & Next Steps
+- This project is sized for demos and small self-hosted use. For production use-cases consider:
+  - Replacing static admin tokens with secure authentication (JWT/OAuth).
+  - Moving persistence to a database (Postgres, MongoDB) for concurrency and durability.
+  - Adding rate limiting and server-side validation for submissions.
 
-- This repository is intentionally simple and geared toward teaching, prototyping, or lightweight deployments. Recommended upgrades for production:
-  - Replace static admin tokens with a secure authentication flow (JWT/OAuth).
-  - Move persistence to a proper datastore (Postgres, MongoDB, etc.) to support concurrency and transactional updates.
-  - Add server‑side validation and rate limiting for anonymous submissions.
-
-## License & Credits
-
-PulseFAQ — lightweight FAQ crowdsourcing demo. Built as a small team prototype. Use and adapt freely for non‑commercial or educational projects.
+If you'd like, I can also update the client labels and category names to match these interview-focused categories (`Syntax & Basics`, `OOP Concepts`, `Data Structures`, `Advanced Features`).
 
 ---
 
-Project: `team-6a314e2012663badc7eb1814` — PulseFAQ
+Project: PulseFAQ (re-scoped to Python Interview FAQ & Preparation Portal)
