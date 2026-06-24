@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+const BASE_URL = 'https://pulse-faq-backend.onrender.com'; // Ensure no trailing slash here
+
 export default function App() {
     const [faqs, setFaqs] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
@@ -29,7 +31,7 @@ export default function App() {
     // Fetch initial FAQs
     useEffect(() => {
         console.log("PulseFAQ: Attempting connection to backend...");
-        fetch('/api')
+        fetch(`${BASE_URL}/api`)
             .then(res => {
                 console.log("PulseFAQ: Response received. Status:", res.status);
                 return res.json();
@@ -68,11 +70,11 @@ export default function App() {
     }, []);
 
     const fetchPending = (token) => {
-        fetch('/api/admin/pending', {
+            fetch(`${BASE_URL}/api/admin/pending`, {
             headers: { 'x-admin-token': token }
         })
             .then(res => res.json())
-            .then(data => {
+                .then(data => {
                 if (Array.isArray(data)) setPendingAqs(data);
             });
     };
@@ -161,7 +163,7 @@ export default function App() {
     const saveEdit = async (id) => {
         const payload = editDrafts[id];
         try {
-            const res = await fetch(`/api/${id}`, {
+            const res = await fetch(`${BASE_URL}/api/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json', 'x-admin-token': adminToken },
                 body: JSON.stringify(payload)
@@ -251,7 +253,7 @@ export default function App() {
 
             // Network synchronization
             try {
-                const res = await fetch(`/api/${id}/vote`, {
+                const res = await fetch(`${BASE_URL}/api/${id}/vote`, {
                     method: 'PATCH',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ type, action }) // Now passing action context!
@@ -275,7 +277,7 @@ export default function App() {
         e.preventDefault();
         if (!newQuestion.trim()) return;
         try {
-            const res = await fetch('/api/aqs', {
+            const res = await fetch(`${BASE_URL}/api/aqs`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ question: newQuestion })
@@ -293,7 +295,7 @@ export default function App() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('/api/admin/login', {
+            const res = await fetch(`${BASE_URL}/api/admin/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
@@ -319,7 +321,7 @@ export default function App() {
             return;
         }
         try {
-            const res = await fetch('/api/admin/publish', {
+            const res = await fetch(`${BASE_URL}/api/admin/publish`, {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json',
@@ -336,7 +338,7 @@ export default function App() {
                 setManualQuestion('');
                 setManualAnswer('');
                 setManualCategory('Syntax & Basics');
-                fetch('/api').then(r => r.json()).then(d => { if(Array.isArray(d)) setFaqs(d); });
+                    fetch(`${BASE_URL}/api`).then(r => r.json()).then(d => { if(Array.isArray(d)) setFaqs(d); });
                 alert('FAQ published directly!');
             } else {
                 alert('Failed to publish FAQ.');
@@ -589,14 +591,14 @@ export default function App() {
                                             if (missing.length) return alert('Please provide answers for all selected items before bulk approving.');
                                             for (const id of selectedAqIds) {
                                                 const ans = adminAnswers[id];
-                                                await fetch('/api/admin/approve', {
+                                                await fetch(`${BASE_URL}/api/admin/approve`, {
                                                     method: 'POST',
                                                     headers: { 'Content-Type': 'application/json', 'x-admin-token': adminToken },
                                                     body: JSON.stringify({ id, answer: ans, category: adminCategories[id] || 'Syntax & Basics' })
                                                 });
                                             }
                                             fetchPending(adminToken);
-                                            fetch('/api/faqs').then(r => r.json()).then(d => { if(Array.isArray(d)) setFaqs(d); });
+                                            fetch(`${BASE_URL}/api/faqs`).then(r => r.json()).then(d => { if(Array.isArray(d)) setFaqs(d); });
                                             setSelectedAqIds([]);
                                             alert('Selected items approved');
                                         }}
@@ -609,7 +611,7 @@ export default function App() {
                                         onClick={async () => {
                                             if (!selectedAqIds.length) return alert('No items selected');
                                             if (!confirm('Permanently delete selected pending items?')) return;
-                                            const res = await fetch('/api/admin/pending', {
+                                            const res = await fetch(`${BASE_URL}/api/admin/pending`, {
                                                 method: 'DELETE',
                                                 headers: { 'Content-Type': 'application/json', 'x-admin-token': adminToken },
                                                 body: JSON.stringify({ ids: selectedAqIds })
@@ -665,7 +667,7 @@ export default function App() {
                                                     onClick={async () => {
                                                         const ans = adminAnswers[aq.id] && adminAnswers[aq.id].trim();
                                                         if (!ans) return alert('Please provide an answer before approving.');
-                                                        const res = await fetch('/api/admin/approve', {
+                                                        const res = await fetch(`${BASE_URL}/api/admin/approve`, {
                                                             method: 'POST',
                                                             headers: { 'Content-Type': 'application/json', 'x-admin-token': adminToken },
                                                             body: JSON.stringify({ id: aq.id, answer: ans, category: adminCategories[aq.id] || 'Syntax & Basics' })
@@ -673,7 +675,7 @@ export default function App() {
                                                         if (res.ok) {
                                                             setFaqs(prev => prev.filter(f => f.id && String(f.id) !== String(id)));
                                                             fetchPending(adminToken);
-                                                            fetch('/api/faqs').then(r => r.json()).then(d => { if(Array.isArray(d)) setFaqs(d); });
+                                                            fetch(`${BASE_URL}/api/faqs`).then(r => r.json()).then(d => { if(Array.isArray(d)) setFaqs(d); });
                                                             alert('Question Promoted to Public FAQ!');
                                                         }
                                                     }}
@@ -685,7 +687,7 @@ export default function App() {
                                                 <button
                                                     onClick={async () => {
                                                         if (!confirm('Reject and delete this pending item?')) return;
-                                                        const res = await fetch(`/api/admin/pending/${aq.id}`, {
+                                                        const res = await fetch(`${BASE_URL}/api/admin/pending/${aq.id}`, {
                                                             method: 'DELETE',
                                                             headers: { 'Content-Type': 'application/json', 'x-admin-token': adminToken }
                                                         });
