@@ -393,7 +393,7 @@ export default function App() {
                     <div className={`p-4 rounded-xl ${darkMode ? 'bg-slate-800' : 'bg-white shadow-sm'}`}>
                         <input 
                             type="text"
-                            placeholder="🔍 Search across all active internship questions..."
+                            placeholder="🔍 Search across all python questions..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             className={`w-full p-3 rounded-lg border text-lg outline-none transition focus:ring-2 focus:ring-blue-500 ${darkMode ? 'bg-slate-700 border-slate-600 text-white placeholder-slate-400' : 'bg-slate-50 border-slate-300 placeholder-slate-500'}`}
