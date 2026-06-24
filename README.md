@@ -1,4 +1,4 @@
-Python Interview FAQ & Preparation Portal (#Pulse-FAQ)
+#Pulse-FAQ Python Interview FAQ & Preparation Portal
 
 Python Interview FAQ & Preparation Portal is a full-stack web application built with React (Vite) and Express. It helps users browse, search, upvote, and contribute community-driven Python interview questions and answers while providing admins with a lightweight moderation dashboard.
 
