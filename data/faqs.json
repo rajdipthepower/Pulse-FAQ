@@ -89,7 +89,8 @@
   },
   {
     "question": "Q23. How to install Python on Windows and set path variable?",
-    "answer": "Install python from python.org, locate its path using 'cmd python', then add a new variable named PYTHON_NAME in advanced system settings pasting the path. Then edit the 'path' variable, adding a semicolon and '%PYTHON_HOME%' at the end."
+    "answer": "Install python from python.org, locate its path using 'cmd python', then add a new variable named PYTHON_NAME in advanced system settings pasting the path. Then edit the 'path' variable, adding a semicolon and '%PYTHON_HOME%' at the end.",
+    "category": "Advanced Features"
   },
   {
     "question": "Q24. Is indentation required in python?",
@@ -113,7 +114,8 @@
   },
   {
     "question": "Q29. What is self in Python?",
-    "answer": "Self is an instance or an object of a class that is explicitly included as the first parameter in Python. It helps differentiate between class methods/attributes and local variables; in the init method it refers to the newly created object."
+    "answer": "Self is an instance or an object of a class that is explicitly included as the first parameter in Python. It helps differentiate between class methods/attributes and local variables; in the init method it refers to the newly created object.",
+    "category": "OOP Concepts"
   },
   {
     "question": "Q30.What is the use of Break, Continue and Pass Keyword in Python?",
@@ -121,7 +123,8 @@
   },
   {
     "question": "Q31. What does [:: -1] do?",
-    "answer": "[::-1] is used to reverse the order of an array or a sequence by reprinting a reversed copy of ordered data structures while leaving the original data structure unchanged."
+    "answer": "[::-1] is used to reverse the order of an array or a sequence by reprinting a reversed copy of ordered data structures while leaving the original data structure unchanged.",
+    "category": "Data Structures"
   },
   {
     "question": "Q32. How can you randomize the items of a list in place in Python?",
@@ -229,7 +232,8 @@
   },
   {
     "question": "Q58.Does Python have OOPS concepts?",
-    "answer": "Yes, Python is an object-oriented programming language meaning problems can be solved by creating object models. However, it can also be treated as a procedural or structural language."
+    "answer": "Yes, Python is an object-oriented programming language meaning problems can be solved by creating object models. However, it can also be treated as a procedural or structural language.",
+    "category": "OOP Concepts"
   },
   {
     "question": "Q59. What is the difference between deep and shallow copy?",
@@ -317,7 +321,8 @@
   },
   {
     "question": "Q80. What does an object() do?",
-    "answer": "It returns a featureless object that serves as a base for all classes, taking no parameters."
+    "answer": "It returns a featureless object that serves as a base for all classes, taking no parameters.",
+    "category": "OOP Concepts"
   },
   {
     "question": "Q81. What do you know about Pandas in Python?",
@@ -497,7 +502,8 @@
   },
   {
     "question": "Q126. What is the difference between NumPy and SciPy?",
-    "answer": "NumPy (Numerical Python) focuses on basic array operations and has fewer core scientific features/linear algebra modules. SciPy (Scientific Python) contains mostly new advanced scientific computing algorithms and fully-featured linear algebra or numerical modules, though it features a slower computational speed than NumPy."
+    "answer": "NumPy (Numerical Python) focuses on basic array operations and has fewer core scientific features/linear algebra modules. SciPy (Scientific Python) contains mostly new advanced scientific computing algorithms and fully-featured linear algebra or numerical modules, though it features a slower computational speed than NumPy.",
+    "category": "Advanced Features"
   },
   {
     "question": "Q127. How do you make 3D plots/visualizations using NumPy/SciPy?",
