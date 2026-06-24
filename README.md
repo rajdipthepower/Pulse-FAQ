@@ -1,4 +1,4 @@
-#Pulse-FAQ Python Interview FAQ & Preparation Portal
+# Pulse-FAQ (Python Interview FAQ & Preparation Portal)
 
 Python Interview FAQ & Preparation Portal is a full-stack web application built with React (Vite) and Express. It helps users browse, search, upvote, and contribute community-driven Python interview questions and answers while providing admins with a lightweight moderation dashboard.
 
@@ -80,8 +80,6 @@ Back up these files before experimenting or migrating to a database.
   - Replacing static admin tokens with secure authentication (JWT/OAuth).
   - Moving persistence to a database (Postgres, MongoDB) for concurrency and durability.
   - Adding rate limiting and server-side validation for submissions.
-
-If you'd like, I can also update the client labels and category names to match these interview-focused categories (`Syntax & Basics`, `OOP Concepts`, `Data Structures`, `Advanced Features`).
 
 ---
 
