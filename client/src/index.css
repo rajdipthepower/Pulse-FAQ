@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg-light: #ffffff;
+  --text-light: #0f172a;
+  --accent: #2563EB;
+}
+
+.dark{
+  --bg-light: #0F172A;
+  --text-light: #F8FAFC;
+  --accent: #0EA5FF;
+}
+
+body{
+  background: var(--bg-light);
+  color: var(--text-light);
+}
