@@ -8,6 +8,7 @@ export default function App() {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [activeAccordion, setActiveAccordion] = useState(null);
     const [darkMode, setDarkMode] = useState(false);
+    const [visibleCount, setVisibleCount] = useState(10); // Starts by showing 10 FAQs
     
     // Voting tracking state to prevent spamming
     const [votedItems, setVotedItems] = useState({}); 
@@ -134,6 +135,9 @@ export default function App() {
 
         return matchesSearch && matchesCategory;
     }).slice().sort((a, b) => (Number(b.upvotes) || 0) - (Number(a.upvotes) || 0));
+
+    // Keep an explicit reference named `sortedFaqs` for mapping in the UI
+    const sortedFaqs = filteredFaqs;
 
     // Admin edit state
     const [editingFaqId, setEditingFaqId] = useState(null);
@@ -273,6 +277,9 @@ export default function App() {
         }
     };
 
+    // Simple wrapper for single-button upvote from the simplified UI mapping
+    const handleUpvote = (id) => handleVote(id, 'upvote');
+
     const handleSubmitAQ = async (e) => {
         e.preventDefault();
         if (!newQuestion.trim()) return;
@@ -407,7 +414,8 @@ export default function App() {
 
                     <div className="space-y-3">
                         <p className="text-sm opacity-60">Showing {filteredFaqs.length} of {faqs.length} entries</p>
-                        {filteredFaqs.map((faq) => (
+                        {[...filteredFaqs].sort((a, b) => (b.upvotes || 0) - (a.upvotes || 0)).slice(0, visibleCount).map((faq, index) => {
+                            return (
                             <div 
                                 key={faq.id || faq._id} 
                                 className={`rounded-xl border transition duration-200 overflow-hidden ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-slate-200 shadow-sm'}`}
@@ -416,7 +424,7 @@ export default function App() {
                                     onClick={() => setActiveAccordion(activeAccordion === faq.id ? null : faq.id)}
                                     className="w-full text-left p-5 flex justify-between items-center gap-4 hover:bg-slate-500/5"
                                 >
-                                    <span className="font-semibold text-base leading-snug">{faq.question}</span>
+                                    <span className="font-semibold text-base leading-snug">Q{index + 1}. {(faq.question || '').replace(/^Q\d+\.\s*/i, '')}</span>
                                     <span className="text-xl opacity-50">{activeAccordion === faq.id ? '▲' : '▼'}</span>
                                 </button>
 
@@ -496,7 +504,24 @@ export default function App() {
                                     </div>
                                 )}
                             </div>
-                        ))}
+                            );
+                        })}
+
+                        {/* Add this right below your closed FAQ items block */}
+                        {visibleCount < filteredFaqs.length && (
+                          <div className="flex justify-center mt-6 mb-8">
+                            <button 
+                              onClick={() => setVisibleCount(prev => prev + 10)} 
+                              className={`px-6 py-2.5 rounded-xl font-semibold text-sm transition tracking-wide border ${
+                                darkMode 
+                                  ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-blue-400' 
+                                  : 'bg-white border-slate-200 shadow-sm hover:bg-slate-50 text-blue-600'
+                              }`}
+                            >
+                              See More Questions ↓
+                            </button>
+                          </div>
+                        )}
                     </div>
                 </div>
 
