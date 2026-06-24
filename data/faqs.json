@@ -106,7 +106,8 @@
   },
   {
     "question": "Q27.What is __init__?",
-    "answer": "class Employee:\n    def __init__(self, name, age, salary):\n        self.name = name\n        self.age = age\n        self.salary = 20000\n\nE1 = Employee(\"XYZ\", 23, 20000)\nprint(E1.name)\nprint(E1.age)\nprint(E1.salary)\n\n# Output:\n# XYZ\n# 23\n# 20000"
+    "answer": "class Employee:\n    def __init__(self, name, age, salary):\n        self.name = name\n        self.age = age\n        self.salary = 20000\n\nE1 = Employee(\"XYZ\", 23, 20000)\nprint(E1.name)\nprint(E1.age)\nprint(E1.salary)\n\n# Output:\n# XYZ\n# 23\n# 20000",
+    "category": "OOP Concepts"
   },
   {
     "question": "Q28.What is a lambda function?",
