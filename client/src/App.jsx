@@ -24,7 +24,7 @@ export default function App() {
     // Manual FAQ creation state
     const [manualQuestion, setManualQuestion] = useState('');
     const [manualAnswer, setManualAnswer] = useState('');
-    const [manualCategory, setManualCategory] = useState('General');
+    const [manualCategory, setManualCategory] = useState('Syntax & Basics');
 
     // Fetch initial FAQs
     useEffect(() => {
@@ -100,7 +100,7 @@ export default function App() {
         setAdminCategories(prev => {
             const next = { ...prev };
             for (const p of pendingAqs) {
-                if (!(p.id in next)) next[p.id] = 'General';
+                if (!(p.id in next)) next[p.id] = 'Syntax & Basics';
             }
             for (const k of Object.keys(next)) {
                 if (!pendingAqs.find(p => String(p.id) === String(k))) delete next[k];
@@ -119,15 +119,15 @@ export default function App() {
     };
 
     // Extract unique categories dynamically from the entries safely
-    const categories = ['All', ...new Set(faqs.map(item => item.category || 'General'))];
+    const categories = ['All', 'Syntax & Basics', 'OOP Concepts', 'Data Structures', 'Advanced Features'];
 
     // Filtering & Sorting Logic
     const filteredFaqs = faqs.filter(faq => {
         const matchesSearch = (faq.question || '').toLowerCase().includes(searchQuery.toLowerCase()) || 
                              (faq.answer || '').toLowerCase().includes(searchQuery.toLowerCase());
 
-        // Treat missing category as 'General' and compare case-insensitively
-        const itemCategory = (faq.category || 'General').toLowerCase();
+        // Treat missing category as 'Syntax & Basics' and compare case-insensitively
+        const itemCategory = (faq.category || 'Syntax & Basics').toLowerCase();
         const matchesCategory = selectedCategory === 'All' || itemCategory === selectedCategory.toLowerCase();
 
         return matchesSearch && matchesCategory;
@@ -141,10 +141,10 @@ export default function App() {
         setEditingFaqId(faq.id);
         setEditDrafts(prev => ({ 
             ...prev, 
-            [faq.id]: { 
+                [faq.id]: { 
                 question: faq.question || '', 
                 answer: faq.answer || '', 
-                category: faq.category || 'General' 
+                category: faq.category || 'Syntax & Basics' 
             } 
         }));
     };
@@ -330,10 +330,10 @@ export default function App() {
                     isFAQ: true
                 })
             });
-            if (res.ok) {
+                if (res.ok) {
                 setManualQuestion('');
                 setManualAnswer('');
-                setManualCategory('General');
+                setManualCategory('Syntax & Basics');
                 fetch('/api').then(r => r.json()).then(d => { if(Array.isArray(d)) setFaqs(d); });
                 alert('FAQ published directly!');
             } else {
@@ -436,7 +436,7 @@ export default function App() {
                                                         Assign Category:
                                                     </label>
                                                     <select
-                                                        value={editDrafts[faq.id]?.category || 'General'}
+                                                        value={editDrafts[faq.id]?.category || 'Syntax & Basics'}
                                                         onChange={(e) => handleEditChange(faq.id, 'category', e.target.value)}
                                                         style={{
                                                             padding: '6px',
@@ -447,10 +447,10 @@ export default function App() {
                                                             maxWidth: '200px'
                                                         }}
                                                     >
-                                                        <option value="General">General</option>
-                                                        <option value="Technical">Technical</option>
-                                                        <option value="Admission">Admission</option>
-                                                        <option value="Research">Research</option>
+                                                        <option value="Syntax & Basics">Syntax & Basics</option>
+                                                        <option value="OOP Concepts">OOP Concepts</option>
+                                                        <option value="Data Structures">Data Structures</option>
+                                                        <option value="Advanced Features">Advanced Features</option>
                                                     </select>
                                                 </div>
                                                 <div className="flex gap-2">
@@ -462,7 +462,7 @@ export default function App() {
                                             <>
                                                 <p className="mb-4 whitespace-pre-wrap">{faq.answer}</p>
                                                 <div className="flex items-center justify-between border-t pt-3 mt-2 border-dashed border-slate-600/20">
-                                                    <span className="text-xs font-semibold px-2 py-1 rounded bg-blue-500/10 text-blue-500">{faq.category || 'General'}</span>
+                                                    <span className="text-xs font-semibold px-2 py-1 rounded bg-blue-500/10 text-blue-500">{faq.category || 'Syntax & Basics'}</span>
                                                     <div className="flex items-center gap-3">
                                                         <span className="text-xs opacity-60">Was this helpful?</span>
                                                         <button 
@@ -552,10 +552,10 @@ export default function App() {
                                         onChange={e => setManualCategory(e.target.value)}
                                         className={`w-full p-2.5 text-xs rounded border outline-none ${darkMode ? 'bg-slate-700 border-slate-600 text-white' : 'bg-slate-50 border-slate-300'}`}
                                     >
-                                        <option value="General">General</option>
-                                        <option value="Technical">Technical</option>
-                                        <option value="Admission">Admission</option>
-                                        <option value="Research">Research</option>
+                                        <option value="Syntax & Basics">Syntax & Basics</option>
+                                        <option value="OOP Concepts">OOP Concepts</option>
+                                        <option value="Data Structures">Data Structures</option>
+                                        <option value="Advanced Features">Advanced Features</option>
                                     </select>
                                     <textarea
                                         rows="3"
@@ -590,7 +590,7 @@ export default function App() {
                                                 await fetch('/api/admin/approve', {
                                                     method: 'POST',
                                                     headers: { 'Content-Type': 'application/json', 'x-admin-token': adminToken },
-                                                    body: JSON.stringify({ id, answer: ans, category: adminCategories[id] || 'General' })
+                                                    body: JSON.stringify({ id, answer: ans, category: adminCategories[id] || 'Syntax & Basics' })
                                                 });
                                             }
                                             fetchPending(adminToken);
@@ -639,14 +639,14 @@ export default function App() {
                                                 <div style={{ width: '100%', maxWidth: '220px' }}>
                                                     <label style={{ fontSize: '12px', fontWeight: '600', display: 'block', marginBottom: '6px' }}>Assign Category</label>
                                                     <select
-                                                        value={adminCategories[aq.id] || 'General'}
+                                                        value={adminCategories[aq.id] || 'Syntax & Basics'}
                                                         onChange={(e) => setAdminCategories(prev => ({ ...prev, [aq.id]: e.target.value }))}
                                                         className="w-full p-2 text-xs rounded border bg-amber-50 text-amber-900"
                                                     >
-                                                        <option value="General">General</option>
-                                                        <option value="Technical">Technical</option>
-                                                        <option value="Admission">Admission</option>
-                                                        <option value="Research">Research</option>
+                                                        <option value="Syntax & Basics">Syntax & Basics</option>
+                                                        <option value="OOP Concepts">OOP Concepts</option>
+                                                        <option value="Data Structures">Data Structures</option>
+                                                        <option value="Advanced Features">Advanced Features</option>
                                                     </select>
                                                 </div>
 
@@ -666,7 +666,7 @@ export default function App() {
                                                         const res = await fetch('/api/admin/approve', {
                                                             method: 'POST',
                                                             headers: { 'Content-Type': 'application/json', 'x-admin-token': adminToken },
-                                                            body: JSON.stringify({ id: aq.id, answer: ans, category: adminCategories[aq.id] || 'General' })
+                                                            body: JSON.stringify({ id: aq.id, answer: ans, category: adminCategories[aq.id] || 'Syntax & Basics' })
                                                         });
                                                         if (res.ok) {
                                                             setFaqs(prev => prev.filter(f => f.id && String(f.id) !== String(id)));
