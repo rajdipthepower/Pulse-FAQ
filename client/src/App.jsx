@@ -534,7 +534,7 @@ export default function App() {
                                     rows="4"
                                     value={newQuestion}
                                     onChange={(e) => setNewQuestion(e.target.value)}
-                                    placeholder="Got a new question about the internship? Type it here anonymously..."
+                                    placeholder="Got a new question related to python? Type it here anonymously..."
                                     className={`w-full p-3 text-sm rounded-lg border outline-none focus:ring-2 focus:ring-blue-500 ${darkMode ? 'bg-slate-700 border-slate-600 text-white' : 'bg-slate-50 border-slate-300'}`}
                                     required
                                 />
